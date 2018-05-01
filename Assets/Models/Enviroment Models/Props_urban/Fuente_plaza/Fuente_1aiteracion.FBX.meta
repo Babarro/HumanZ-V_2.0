@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: d636d763d65a9354f8ea27b3953a6c11
+timeCreated: 1523558674
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box001
+    100002: cabezazombie
+    100004: cabezazombie001
+    100006: cabezazombie002
+    100008: cabezazombie003
+    100010: fuente
+    100012: //RootNode
+    100014: Gengon001
+    100016: Plane001
+    100018: Plane002
+    100020: Rectangle001
+    100022: Rectangle002
+    100024: Sphere001
+    400000: Box001
+    400002: cabezazombie
+    400004: cabezazombie001
+    400006: cabezazombie002
+    400008: cabezazombie003
+    400010: fuente
+    400012: //RootNode
+    400014: Gengon001
+    400016: Plane001
+    400018: Plane002
+    400020: Rectangle001
+    400022: Rectangle002
+    400024: Sphere001
+    2300000: Box001
+    2300002: cabezazombie
+    2300004: cabezazombie001
+    2300006: cabezazombie002
+    2300008: cabezazombie003
+    2300010: fuente
+    2300012: Gengon001
+    2300014: Plane001
+    2300016: Plane002
+    2300018: Rectangle001
+    2300020: Rectangle002
+    2300022: Sphere001
+    3300000: Box001
+    3300002: cabezazombie
+    3300004: cabezazombie001
+    3300006: cabezazombie002
+    3300008: cabezazombie003
+    3300010: fuente
+    3300012: Gengon001
+    3300014: Plane001
+    3300016: Plane002
+    3300018: Rectangle001
+    3300020: Rectangle002
+    3300022: Sphere001
+    4300000: fuente
+    4300002: Gengon001
+    4300004: Box001
+    4300006: cabezazombie
+    4300008: cabezazombie001
+    4300010: cabezazombie002
+    4300012: cabezazombie003
+    4300014: Sphere001
+    4300016: Rectangle001
+    4300018: Rectangle002
+    4300020: Plane001
+    4300022: Plane002
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Marcos
+    second: {fileID: 2100000, guid: 6fc0d7a990d0d654e8d89d1cb2eb6fa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 975bc3834d8864e4b9bd5b04bbdea9bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aguafuente
+    second: {fileID: 2100000, guid: c16b79ade1307a749a9bfd7c996b52cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base fuente
+    second: {fileID: 2100000, guid: d7d50629bd51a4545a6a3495b7e2c415, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabrezones fuente
+    second: {fileID: 2100000, guid: 01af4b2cf7811c14e9e9dc3f31aad181, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: estructura fuente
+    second: {fileID: 2100000, guid: 361fbdc4ee9122b429ad7b6c93779e90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plataforma fuente
+    second: {fileID: 2100000, guid: 97fbbb6c132469041924b5f646c022e1, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

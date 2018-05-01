@@ -1,0 +1,31 @@
+# Created with Anim8or 0.97d beta
+# Object "Flathead (Final)":
+
+newmtl Screwdriver_Handle_Type_2
+Ka 0.333 0.333 0.333
+Kd 0.333 0.333 0.333
+Ks 1 1 1
+d 1.0
+Ns 752.6
+
+newmtl Screwdriver_Handle_(No_Bumps)
+Ka 1 0 0
+Kd 1 0 0
+Ks 1 1 1
+d 1.0
+Ns 752.6
+
+newmtl Screwdriver_Handle
+Ka 1 0 0
+Kd 1 0 0
+Ks 1 1 1
+d 1.0
+Ns 752.6
+
+newmtl Steel
+Ka 0.78 0.78 0.78
+Kd 0.78 0.78 0.78
+Ks 1 1 1
+d 1.0
+Ns 752.6
+

@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1241946608619720}
+  m_IsPrefabParent: 1
+--- !u!1 &1241946608619720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4422757946634314}
+  - component: {fileID: 114469134331843688}
+  - component: {fileID: 114299384868649154}
+  - component: {fileID: 114859993667498878}
+  - component: {fileID: 114420857325123104}
+  - component: {fileID: 114124315494196484}
+  m_Layer: 0
+  m_Name: GM
+  m_TagString: GM
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4422757946634314
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241946608619720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114124315494196484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241946608619720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ad82633aea2c84e9eb5ce9bedc016a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneZombie: 0
+  uiController: {fileID: 0}
+  respawnTime: 150
+  recursosSpawnPositionParent: {fileID: 0}
+  weaponsList:
+  - recurso: {fileID: 1571796896299616, guid: fdd82ac2501fa77419d8bf839ceaa0bb, type: 2}
+    prob: 1
+  trapsList:
+  - recurso: {fileID: 1512748623283932, guid: 5262515cd175f5f43b8ab1a6f31f475e, type: 2}
+    prob: 1
+  powerUp: {fileID: 1465150198890416, guid: 746209569e7c5d340bc6f874bb076e53, type: 2}
+  probOfSpawn: 0.8
+  probWeapon: 0.33
+  probTrap: 0.33
+  probPowerUp: 0.34
+--- !u!114 &114299384868649154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241946608619720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fdc2e54345315046a7769163cce4218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players: 0
+  spawnPositionParent: {fileID: 0}
+  uiController: {fileID: 0}
+  gmRecursos: {fileID: 114124315494196484}
+  canvasPrefab: {fileID: 1213365503943688, guid: 9086536db5ab86c4893bcfdf68902f9a,
+    type: 2}
+  lootPhaseTime: 10
+--- !u!114 &114420857325123104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241946608619720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b5641969ad3ad4187a3c7d9f844536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gmRecursos: {fileID: 114124315494196484}
+  numberOfPlayers: 0
+  humanzs: 0
+  timeLastZombieHasToSurvive: 10
+--- !u!114 &114469134331843688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241946608619720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 241
+    i1: 56
+    i2: 114
+    i3: 173
+    i4: 80
+    i5: 148
+    i6: 193
+    i7: 52
+    i8: 154
+    i9: 182
+    i10: 156
+    i11: 14
+    i12: 24
+    i13: 58
+    i14: 41
+    i15: 155
+  m_ServerOnly: 1
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114859993667498878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241946608619720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18bd0e94a6bc44408cf37d4ff0624b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiController: {fileID: 0}
+  curasPositionParent: {fileID: 0}
+  curaPrefab: {fileID: 1319569661745512, guid: e2b1ddea6b880d74b9588e9a7ed55c57, type: 2}
+  curasParent: {fileID: 0}
+  timeToChangeCuras: 45
+  activeCurasAtTheSameTime: 3

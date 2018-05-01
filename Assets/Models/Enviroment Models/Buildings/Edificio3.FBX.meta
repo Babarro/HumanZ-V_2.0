@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: c3ddd4849845d6e40a438509f0dce764
+timeCreated: 1522064874
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box001
+    100002: //RootNode
+    100004: Muro 058
+    100006: Muro 059
+    100008: Muro 061
+    100010: Muro 062
+    100012: Muro 065
+    100014: Muro 066
+    100016: Muro 069
+    100018: Muro 070
+    100020: Muro 073
+    100022: Muro 074
+    100024: Muro 077
+    100026: Muro 078
+    100028: Muro 081
+    100030: Muro 082
+    100032: Muro 085
+    100034: Muro 086
+    100036: Muro 089
+    100038: Muro 090
+    100040: Muro 093
+    100042: Muro 094
+    100044: Muro 097
+    100046: Muro 098
+    100048: Muro 101
+    100050: Muro 102
+    100052: Muro 105
+    100054: Muro 106
+    100056: Muro 109
+    100058: Muro 110
+    100060: Muro 111
+    100062: Muro 112
+    100064: Muro 113
+    100066: Muro 114
+    100068: Muro 115
+    100070: Muro 116
+    100072: Muro 117
+    100074: Muro 118
+    100076: Muro 119
+    100078: Muro 120
+    100080: Muro 121
+    100082: Muro 122
+    100084: Muro 123
+    100086: Muro 124
+    100088: Muro 125
+    100090: Muro 126
+    100092: Muro 127
+    100094: Muro 128
+    100096: Muro 129
+    100098: Muro 130
+    100100: Muro 131
+    100102: Muro 132
+    100104: Muro 133
+    100106: Muro 134
+    100108: Muro 135
+    100110: Muro 136
+    100112: Muro 137
+    100114: Muro 138
+    400000: Box001
+    400002: //RootNode
+    400004: Muro 058
+    400006: Muro 059
+    400008: Muro 061
+    400010: Muro 062
+    400012: Muro 065
+    400014: Muro 066
+    400016: Muro 069
+    400018: Muro 070
+    400020: Muro 073
+    400022: Muro 074
+    400024: Muro 077
+    400026: Muro 078
+    400028: Muro 081
+    400030: Muro 082
+    400032: Muro 085
+    400034: Muro 086
+    400036: Muro 089
+    400038: Muro 090
+    400040: Muro 093
+    400042: Muro 094
+    400044: Muro 097
+    400046: Muro 098
+    400048: Muro 101
+    400050: Muro 102
+    400052: Muro 105
+    400054: Muro 106
+    400056: Muro 109
+    400058: Muro 110
+    400060: Muro 111
+    400062: Muro 112
+    400064: Muro 113
+    400066: Muro 114
+    400068: Muro 115
+    400070: Muro 116
+    400072: Muro 117
+    400074: Muro 118
+    400076: Muro 119
+    400078: Muro 120
+    400080: Muro 121
+    400082: Muro 122
+    400084: Muro 123
+    400086: Muro 124
+    400088: Muro 125
+    400090: Muro 126
+    400092: Muro 127
+    400094: Muro 128
+    400096: Muro 129
+    400098: Muro 130
+    400100: Muro 131
+    400102: Muro 132
+    400104: Muro 133
+    400106: Muro 134
+    400108: Muro 135
+    400110: Muro 136
+    400112: Muro 137
+    400114: Muro 138
+    2100000: Muro 5
+    2100002: Muro4
+    2100004: Muro 6
+    2100006: No Name
+    2300000: Box001
+    2300002: Muro 058
+    2300004: Muro 059
+    2300006: Muro 061
+    2300008: Muro 062
+    2300010: Muro 065
+    2300012: Muro 066
+    2300014: Muro 069
+    2300016: Muro 070
+    2300018: Muro 073
+    2300020: Muro 074
+    2300022: Muro 077
+    2300024: Muro 078
+    2300026: Muro 081
+    2300028: Muro 082
+    2300030: Muro 085
+    2300032: Muro 086
+    2300034: Muro 089
+    2300036: Muro 090
+    2300038: Muro 093
+    2300040: Muro 094
+    2300042: Muro 097
+    2300044: Muro 098
+    2300046: Muro 101
+    2300048: Muro 102
+    2300050: Muro 105
+    2300052: Muro 106
+    2300054: Muro 109
+    2300056: Muro 110
+    2300058: Muro 111
+    2300060: Muro 112
+    2300062: Muro 113
+    2300064: Muro 114
+    2300066: Muro 115
+    2300068: Muro 116
+    2300070: Muro 117
+    2300072: Muro 118
+    2300074: Muro 119
+    2300076: Muro 120
+    2300078: Muro 121
+    2300080: Muro 122
+    2300082: Muro 123
+    2300084: Muro 124
+    2300086: Muro 125
+    2300088: Muro 126
+    2300090: Muro 127
+    2300092: Muro 128
+    2300094: Muro 129
+    2300096: Muro 130
+    2300098: Muro 131
+    2300100: Muro 132
+    2300102: Muro 133
+    2300104: Muro 134
+    2300106: Muro 135
+    2300108: Muro 136
+    2300110: Muro 137
+    2300112: Muro 138
+    3300000: Box001
+    3300002: Muro 058
+    3300004: Muro 059
+    3300006: Muro 061
+    3300008: Muro 062
+    3300010: Muro 065
+    3300012: Muro 066
+    3300014: Muro 069
+    3300016: Muro 070
+    3300018: Muro 073
+    3300020: Muro 074
+    3300022: Muro 077
+    3300024: Muro 078
+    3300026: Muro 081
+    3300028: Muro 082
+    3300030: Muro 085
+    3300032: Muro 086
+    3300034: Muro 089
+    3300036: Muro 090
+    3300038: Muro 093
+    3300040: Muro 094
+    3300042: Muro 097
+    3300044: Muro 098
+    3300046: Muro 101
+    3300048: Muro 102
+    3300050: Muro 105
+    3300052: Muro 106
+    3300054: Muro 109
+    3300056: Muro 110
+    3300058: Muro 111
+    3300060: Muro 112
+    3300062: Muro 113
+    3300064: Muro 114
+    3300066: Muro 115
+    3300068: Muro 116
+    3300070: Muro 117
+    3300072: Muro 118
+    3300074: Muro 119
+    3300076: Muro 120
+    3300078: Muro 121
+    3300080: Muro 122
+    3300082: Muro 123
+    3300084: Muro 124
+    3300086: Muro 125
+    3300088: Muro 126
+    3300090: Muro 127
+    3300092: Muro 128
+    3300094: Muro 129
+    3300096: Muro 130
+    3300098: Muro 131
+    3300100: Muro 132
+    3300102: Muro 133
+    3300104: Muro 134
+    3300106: Muro 135
+    3300108: Muro 136
+    3300110: Muro 137
+    3300112: Muro 138
+    4300000: Muro 058
+    4300002: Muro 059
+    4300004: Muro 061
+    4300006: Muro 062
+    4300008: Muro 065
+    4300010: Muro 066
+    4300012: Muro 069
+    4300014: Muro 070
+    4300016: Muro 073
+    4300018: Muro 074
+    4300020: Muro 077
+    4300022: Muro 078
+    4300024: Muro 081
+    4300026: Muro 082
+    4300028: Muro 085
+    4300030: Muro 086
+    4300032: Muro 089
+    4300034: Muro 090
+    4300036: Muro 093
+    4300038: Muro 094
+    4300040: Muro 097
+    4300042: Muro 098
+    4300044: Muro 101
+    4300046: Muro 102
+    4300048: Muro 105
+    4300050: Muro 106
+    4300052: Muro 109
+    4300054: Muro 110
+    4300056: Muro 111
+    4300058: Muro 112
+    4300060: Muro 113
+    4300062: Muro 114
+    4300064: Muro 115
+    4300066: Muro 116
+    4300068: Muro 117
+    4300070: Muro 118
+    4300072: Muro 119
+    4300074: Muro 120
+    4300076: Muro 121
+    4300078: Muro 122
+    4300080: Muro 123
+    4300082: Muro 124
+    4300084: Muro 125
+    4300086: Muro 126
+    4300088: Muro 127
+    4300090: Muro 128
+    4300092: Muro 129
+    4300094: Muro 130
+    4300096: Muro 131
+    4300098: Muro 132
+    4300100: Muro 133
+    4300102: Muro 134
+    4300104: Muro 135
+    4300106: Muro 136
+    4300108: Muro 137
+    4300110: Muro 138
+    4300112: Box001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

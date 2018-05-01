@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: ca1c2cd486702be468b826df73db63a0
+timeCreated: 1521928303
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Muro 005
+    100004: Muro 006
+    100006: Muro 007
+    100008: Muro 008
+    100010: Muro 009
+    100012: Muro 010
+    100014: Muro 011
+    100016: Muro 012
+    100018: Muro 013
+    100020: Muro 014
+    100022: Muro 015
+    100024: Muro 016
+    100026: Muro 017
+    100028: Muro 018
+    100030: Muro 019
+    100032: Muro 020
+    100034: Muro 021
+    100036: Muro 022
+    100038: Muro 023
+    100040: Muro 024
+    100042: Muro 025
+    100044: Muro 026
+    100046: Muro 027
+    100048: Muro 028
+    100050: Muro 029
+    100052: Muro 030
+    100054: Muro 031
+    100056: Muro 032
+    100058: Muro 033
+    100060: Muro 034
+    100062: Muro 035
+    100064: Muro 036
+    100066: Muro 037
+    100068: Muro 038
+    100070: Muro 039
+    100072: Muro 040
+    100074: Muro 041
+    100076: Muro 042
+    100078: Muro 043
+    100080: Muro 044
+    100082: Muro 045
+    100084: Muro 046
+    100086: Muro 047
+    100088: Muro 048
+    100090: Muro 049
+    100092: Muro 050
+    100094: Muro 051
+    100096: Muro 052
+    100098: Muro 053
+    100100: Muro 054
+    100102: Muro 055
+    100104: Muro 056
+    100106: Plane007
+    400000: //RootNode
+    400002: Muro 005
+    400004: Muro 006
+    400006: Muro 007
+    400008: Muro 008
+    400010: Muro 009
+    400012: Muro 010
+    400014: Muro 011
+    400016: Muro 012
+    400018: Muro 013
+    400020: Muro 014
+    400022: Muro 015
+    400024: Muro 016
+    400026: Muro 017
+    400028: Muro 018
+    400030: Muro 019
+    400032: Muro 020
+    400034: Muro 021
+    400036: Muro 022
+    400038: Muro 023
+    400040: Muro 024
+    400042: Muro 025
+    400044: Muro 026
+    400046: Muro 027
+    400048: Muro 028
+    400050: Muro 029
+    400052: Muro 030
+    400054: Muro 031
+    400056: Muro 032
+    400058: Muro 033
+    400060: Muro 034
+    400062: Muro 035
+    400064: Muro 036
+    400066: Muro 037
+    400068: Muro 038
+    400070: Muro 039
+    400072: Muro 040
+    400074: Muro 041
+    400076: Muro 042
+    400078: Muro 043
+    400080: Muro 044
+    400082: Muro 045
+    400084: Muro 046
+    400086: Muro 047
+    400088: Muro 048
+    400090: Muro 049
+    400092: Muro 050
+    400094: Muro 051
+    400096: Muro 052
+    400098: Muro 053
+    400100: Muro 054
+    400102: Muro 055
+    400104: Muro 056
+    400106: Plane007
+    2100000: Muro4
+    2100002: Muro3
+    2100004: No Name
+    2300000: Muro 005
+    2300002: Muro 006
+    2300004: Muro 007
+    2300006: Muro 008
+    2300008: Muro 009
+    2300010: Muro 010
+    2300012: Muro 011
+    2300014: Muro 012
+    2300016: Muro 013
+    2300018: Muro 014
+    2300020: Muro 015
+    2300022: Muro 016
+    2300024: Muro 017
+    2300026: Muro 018
+    2300028: Muro 019
+    2300030: Muro 020
+    2300032: Muro 021
+    2300034: Muro 022
+    2300036: Muro 023
+    2300038: Muro 024
+    2300040: Muro 025
+    2300042: Muro 026
+    2300044: Muro 027
+    2300046: Muro 028
+    2300048: Muro 029
+    2300050: Muro 030
+    2300052: Muro 031
+    2300054: Muro 032
+    2300056: Muro 033
+    2300058: Muro 034
+    2300060: Muro 035
+    2300062: Muro 036
+    2300064: Muro 037
+    2300066: Muro 038
+    2300068: Muro 039
+    2300070: Muro 040
+    2300072: Muro 041
+    2300074: Muro 042
+    2300076: Muro 043
+    2300078: Muro 044
+    2300080: Muro 045
+    2300082: Muro 046
+    2300084: Muro 047
+    2300086: Muro 048
+    2300088: Muro 049
+    2300090: Muro 050
+    2300092: Muro 051
+    2300094: Muro 052
+    2300096: Muro 053
+    2300098: Muro 054
+    2300100: Muro 055
+    2300102: Muro 056
+    2300104: Plane007
+    3300000: Muro 005
+    3300002: Muro 006
+    3300004: Muro 007
+    3300006: Muro 008
+    3300008: Muro 009
+    3300010: Muro 010
+    3300012: Muro 011
+    3300014: Muro 012
+    3300016: Muro 013
+    3300018: Muro 014
+    3300020: Muro 015
+    3300022: Muro 016
+    3300024: Muro 017
+    3300026: Muro 018
+    3300028: Muro 019
+    3300030: Muro 020
+    3300032: Muro 021
+    3300034: Muro 022
+    3300036: Muro 023
+    3300038: Muro 024
+    3300040: Muro 025
+    3300042: Muro 026
+    3300044: Muro 027
+    3300046: Muro 028
+    3300048: Muro 029
+    3300050: Muro 030
+    3300052: Muro 031
+    3300054: Muro 032
+    3300056: Muro 033
+    3300058: Muro 034
+    3300060: Muro 035
+    3300062: Muro 036
+    3300064: Muro 037
+    3300066: Muro 038
+    3300068: Muro 039
+    3300070: Muro 040
+    3300072: Muro 041
+    3300074: Muro 042
+    3300076: Muro 043
+    3300078: Muro 044
+    3300080: Muro 045
+    3300082: Muro 046
+    3300084: Muro 047
+    3300086: Muro 048
+    3300088: Muro 049
+    3300090: Muro 050
+    3300092: Muro 051
+    3300094: Muro 052
+    3300096: Muro 053
+    3300098: Muro 054
+    3300100: Muro 055
+    3300102: Muro 056
+    3300104: Plane007
+    4300000: Muro 005
+    4300002: Muro 006
+    4300004: Muro 007
+    4300006: Muro 008
+    4300008: Muro 009
+    4300010: Muro 010
+    4300012: Muro 011
+    4300014: Muro 012
+    4300016: Muro 013
+    4300018: Muro 014
+    4300020: Muro 015
+    4300022: Muro 016
+    4300024: Muro 017
+    4300026: Muro 018
+    4300028: Muro 019
+    4300030: Muro 020
+    4300032: Muro 021
+    4300034: Muro 022
+    4300036: Muro 023
+    4300038: Muro 024
+    4300040: Muro 025
+    4300042: Muro 026
+    4300044: Muro 027
+    4300046: Muro 028
+    4300048: Muro 029
+    4300050: Muro 030
+    4300052: Muro 031
+    4300054: Muro 032
+    4300056: Muro 033
+    4300058: Muro 034
+    4300060: Muro 035
+    4300062: Muro 036
+    4300064: Muro 037
+    4300066: Muro 038
+    4300068: Muro 039
+    4300070: Muro 040
+    4300072: Muro 041
+    4300074: Muro 042
+    4300076: Muro 043
+    4300078: Muro 044
+    4300080: Muro 045
+    4300082: Muro 046
+    4300084: Muro 047
+    4300086: Muro 048
+    4300088: Muro 049
+    4300090: Muro 050
+    4300092: Muro 051
+    4300094: Muro 052
+    4300096: Muro 053
+    4300098: Muro 054
+    4300100: Muro 055
+    4300102: Muro 056
+    4300104: Plane007
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 5
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

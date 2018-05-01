@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: db351b544ee61ac48922c7265f2aeb31
+timeCreated: 1524237610
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: truck__
+    100004: truck__1
+    100006: truck_back_bumper
+    100008: truck_back_wheel
+    100010: truck_back_wheel1
+    100012: truck_backwheel
+    100014: truck_backwheel1
+    100016: truck_cabin
+    100018: truck_cap
+    100020: truck_Cube
+    100022: truck_Cylinder_2
+    100024: truck_door_handle
+    100026: truck_front_wheel
+    100028: truck_front_wheel1
+    100030: truck_fuel_reservior
+    100032: truck_grill
+    100034: truck_handle
+    100036: truck_headlights
+    100038: truck_indicator_light_
+    100040: truck_indicators
+    100042: truck_license_plate
+    100044: truck_logo
+    100046: truck_mirrors
+    100048: truck_taillights
+    100050: truck_Torus
+    100052: truck_wipers
+    400000: //RootNode
+    400002: truck__
+    400004: truck__1
+    400006: truck_back_bumper
+    400008: truck_back_wheel
+    400010: truck_back_wheel1
+    400012: truck_backwheel
+    400014: truck_backwheel1
+    400016: truck_cabin
+    400018: truck_cap
+    400020: truck_Cube
+    400022: truck_Cylinder_2
+    400024: truck_door_handle
+    400026: truck_front_wheel
+    400028: truck_front_wheel1
+    400030: truck_fuel_reservior
+    400032: truck_grill
+    400034: truck_handle
+    400036: truck_headlights
+    400038: truck_indicator_light_
+    400040: truck_indicators
+    400042: truck_license_plate
+    400044: truck_logo
+    400046: truck_mirrors
+    400048: truck_taillights
+    400050: truck_Torus
+    400052: truck_wipers
+    2100000: truck__Mat
+    2100002: truck__1Mat
+    2100004: truck_back_bumperMat
+    2100006: truck_back_wheelMat
+    2100008: truck_back_wheel1Mat
+    2100010: truck_backwheelMat
+    2100012: truck_backwheel1Mat
+    2100014: truck_cabinMat
+    2100016: truck_capMat
+    2100018: truck_CubeMat
+    2100020: truck_Cylinder_2Mat
+    2100022: truck_door_handleMat
+    2100024: truck_front_wheelMat
+    2100026: truck_front_wheel1Mat
+    2100028: truck_fuel_reserviorMat
+    2100030: truck_grillMat
+    2100032: truck_handleMat
+    2100034: truck_headlightsMat
+    2100036: truck_indicator_light_Mat
+    2100038: truck_indicatorsMat
+    2100040: truck_license_plateMat
+    2100042: truck_logoMat
+    2100044: truck_mirrorsMat
+    2100046: truck_taillightsMat
+    2100048: truck_TorusMat
+    2100050: truck_wipersMat
+    2300000: truck__
+    2300002: truck__1
+    2300004: truck_back_bumper
+    2300006: truck_back_wheel
+    2300008: truck_back_wheel1
+    2300010: truck_backwheel
+    2300012: truck_backwheel1
+    2300014: truck_cabin
+    2300016: truck_cap
+    2300018: truck_Cube
+    2300020: truck_Cylinder_2
+    2300022: truck_door_handle
+    2300024: truck_front_wheel
+    2300026: truck_front_wheel1
+    2300028: truck_fuel_reservior
+    2300030: truck_grill
+    2300032: truck_handle
+    2300034: truck_headlights
+    2300036: truck_indicator_light_
+    2300038: truck_indicators
+    2300040: truck_license_plate
+    2300042: truck_logo
+    2300044: truck_mirrors
+    2300046: truck_taillights
+    2300048: truck_Torus
+    2300050: truck_wipers
+    3300000: truck__
+    3300002: truck__1
+    3300004: truck_back_bumper
+    3300006: truck_back_wheel
+    3300008: truck_back_wheel1
+    3300010: truck_backwheel
+    3300012: truck_backwheel1
+    3300014: truck_cabin
+    3300016: truck_cap
+    3300018: truck_Cube
+    3300020: truck_Cylinder_2
+    3300022: truck_door_handle
+    3300024: truck_front_wheel
+    3300026: truck_front_wheel1
+    3300028: truck_fuel_reservior
+    3300030: truck_grill
+    3300032: truck_handle
+    3300034: truck_headlights
+    3300036: truck_indicator_light_
+    3300038: truck_indicators
+    3300040: truck_license_plate
+    3300042: truck_logo
+    3300044: truck_mirrors
+    3300046: truck_taillights
+    3300048: truck_Torus
+    3300050: truck_wipers
+    4300000: truck__
+    4300002: truck__1
+    4300004: truck_back_bumper
+    4300006: truck_back_wheel
+    4300008: truck_back_wheel1
+    4300010: truck_backwheel
+    4300012: truck_backwheel1
+    4300014: truck_cabin
+    4300016: truck_cap
+    4300018: truck_Cube
+    4300020: truck_Cylinder_2
+    4300022: truck_door_handle
+    4300024: truck_front_wheel
+    4300026: truck_front_wheel1
+    4300028: truck_fuel_reservior
+    4300030: truck_grill
+    4300032: truck_handle
+    4300034: truck_headlights
+    4300036: truck_indicator_light_
+    4300038: truck_indicators
+    4300040: truck_license_plate
+    4300042: truck_logo
+    4300044: truck_mirrors
+    4300046: truck_taillights
+    4300048: truck_Torus
+    4300050: truck_wipers
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: 148a7f7a1c22e6048aa124b44b2040ca
+timeCreated: 1524237609
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: 1
+    100004: 1_2
+    100006: back_bumper
+    100008: back_wheel
+    100010: back_wheel_2
+    100012: backwheel
+    100014: backwheel_2
+    100016: cabin
+    100018: cap
+    100020: Cube
+    100022: Cylinder_2
+    100024: door_handle
+    100026: front_wheel
+    100028: front_wheel_2
+    100030: fuel_reservior
+    100032: grill
+    100034: handle
+    100036: headlights
+    100038: indicator_light_
+    100040: indicators
+    100042: license_plate
+    100044: logo
+    100046: mirrors
+    100048: taillights
+    100050: Torus
+    100052: wipers
+    400000: 1
+    400002: //RootNode
+    400004: 1_2
+    400006: back_bumper
+    400008: back_wheel
+    400010: back_wheel_2
+    400012: backwheel
+    400014: backwheel_2
+    400016: cabin
+    400018: cap
+    400020: Cube
+    400022: Cylinder_2
+    400024: door_handle
+    400026: front_wheel
+    400028: front_wheel_2
+    400030: fuel_reservior
+    400032: grill
+    400034: handle
+    400036: headlights
+    400038: indicator_light_
+    400040: indicators
+    400042: license_plate
+    400044: logo
+    400046: mirrors
+    400048: taillights
+    400050: Torus
+    400052: wipers
+    2100000: No Name
+    2300000: 1
+    2300002: 1_2
+    2300004: back_bumper
+    2300006: back_wheel
+    2300008: back_wheel_2
+    2300010: backwheel
+    2300012: backwheel_2
+    2300014: cabin
+    2300016: cap
+    2300018: Cube
+    2300020: Cylinder_2
+    2300022: door_handle
+    2300024: front_wheel
+    2300026: front_wheel_2
+    2300028: fuel_reservior
+    2300030: grill
+    2300032: handle
+    2300034: headlights
+    2300036: indicator_light_
+    2300038: indicators
+    2300040: license_plate
+    2300042: logo
+    2300044: mirrors
+    2300046: taillights
+    2300048: Torus
+    2300050: wipers
+    3300000: 1
+    3300002: 1_2
+    3300004: back_bumper
+    3300006: back_wheel
+    3300008: back_wheel_2
+    3300010: backwheel
+    3300012: backwheel_2
+    3300014: cabin
+    3300016: cap
+    3300018: Cube
+    3300020: Cylinder_2
+    3300022: door_handle
+    3300024: front_wheel
+    3300026: front_wheel_2
+    3300028: fuel_reservior
+    3300030: grill
+    3300032: handle
+    3300034: headlights
+    3300036: indicator_light_
+    3300038: indicators
+    3300040: license_plate
+    3300042: logo
+    3300044: mirrors
+    3300046: taillights
+    3300048: Torus
+    3300050: wipers
+    4300000: Cylinder_2
+    4300002: back_wheel
+    4300004: backwheel
+    4300006: Cube
+    4300008: Torus
+    4300010: cap
+    4300012: fuel_reservior
+    4300014: license_plate
+    4300016: back_bumper
+    4300018: handle
+    4300020: 1
+    4300022: wipers
+    4300024: indicator_light_
+    4300026: logo
+    4300028: grill
+    4300030: 1_2
+    4300032: taillights
+    4300034: back_wheel_2
+    4300036: backwheel_2
+    4300038: front_wheel
+    4300040: front_wheel_2
+    4300042: cabin
+    4300044: door_handle
+    4300046: mirrors
+    4300048: indicators
+    4300050: headlights
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

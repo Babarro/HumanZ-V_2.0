@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 42b7a4a86e0dd904ebad90c39d6d2eda
+timeCreated: 1524646774
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Population Zero BB
+  fontNames:
+  - Population Zero BB
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
