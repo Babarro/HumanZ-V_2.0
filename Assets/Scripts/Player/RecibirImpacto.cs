@@ -15,38 +15,19 @@ public class RecibirImpacto : NetworkBehaviour {
 	private bool collisionDetected = false;
 
 	private CharacterController charCtrl;
+	private Animator animator;
 
 	// Use this for initialization
 	void Start () {
 		charCtrl = GetComponent<CharacterController> ();
+		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		//Aplicar fuerza impacto
 		if(vecImpacto.magnitude > 0.2) {
-			/* Metodo 1
-			tiempoCalc = Time.time - tiempoInicial ;
-			//Debug.Log ("TiempoCalc: " + tiempoCalc);
-			if (tiempoCalc < 2) {
 			
-				float t = tiempoCalc / 2;
-				//value = EaseInOutQuint (0, 1, t);
-				//value = EaseOutCubic (0, 1, t);
-				//value = EaseOutElastic(0, 1, t);
-				//value = EaseOutQuart(0, 1, t);
-				//value = EaseInOutBounce(0, 1, t);
-				value = EaseOutExpo(0, 1, t);
-
-				//Debug.Log ("f(" + t + ") = " + value);
-				//newPos = Vector3.Lerp (transform.position, vecImpacto, value * Time.fixedDeltaTime);
-				//Debug.Log (newPos);
-
-				transform.position = Vector3.Lerp (transform.position, vecImpacto, value * Time.fixedDeltaTime);
-
-				//Debug.Log ("VecImpacto: " + vecImpacto);
-			}*/
-
 			//Metodo 2
 			tiempoCalc = Time.time - tiempoInicial ;
 			if (tiempoCalc < 2) {
@@ -59,7 +40,8 @@ public class RecibirImpacto : NetworkBehaviour {
 
 				//Consumir energia 
 				vecImpacto2 = Vector3.Lerp (vecImpacto2, Vector3.zero, value * Time.fixedDeltaTime);
-
+			} else {
+				animator.SetBool ("Quemado", false);
 			}
 
 
@@ -78,6 +60,8 @@ public class RecibirImpacto : NetworkBehaviour {
 	void Impact(Vector3 direccion, float force){
 		if (!isLocalPlayer)
 			return;
+
+		animator.SetBool ("Quemado", true);
 
 		direccion.Normalize ();
 		tiempoInicial = Time.time;

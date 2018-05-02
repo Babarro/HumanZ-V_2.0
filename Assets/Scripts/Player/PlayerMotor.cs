@@ -68,11 +68,14 @@ public class PlayerMotor : MonoBehaviour {
 	public void Move (Vector3 move, float zMov, float xMov)
 	{
 		if (!stuned) {
+			animator.SetBool ("Stun", false);
 			charCtrl.Move (move * Time.deltaTime);
 			//Debug.Log ("Movimiento: " + move);
 			animator.SetFloat ("Forward", zMov);
 			animator.SetFloat ("Right", xMov);
 			//Debug.Log ("InputZ -> " + zMov + " InputX -> " + xMov);
+		}else{
+			animator.SetBool ("Stun", true);
 		}
 	}
 
