@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ITrap
 {
-    void PlaceTrap();
+    float GetTimeToPlace();
 }

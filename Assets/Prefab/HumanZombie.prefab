@@ -8830,12 +8830,9 @@ GameObject:
   - component: {fileID: 114735897651360388}
   - component: {fileID: 114850685793046132}
   - component: {fileID: 114836826974269092}
-  - component: {fileID: 114325296790199972}
   - component: {fileID: 114222895533701448}
   - component: {fileID: 114952122687043828}
-  - component: {fileID: 114809815410832474}
   - component: {fileID: 114583521397205360}
-  - component: {fileID: 114779498491615398}
   - component: {fileID: 114093817054161468}
   - component: {fileID: 114663926639654392}
   - component: {fileID: 114648137732077694}
@@ -24857,7 +24854,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356459744774380}
-  m_LocalRotation: {x: 0.0030425955, y: 0.71787894, z: -0.69616073, w: -0.0008864398}
+  m_LocalRotation: {x: 0.0030425952, y: 0.71787894, z: -0.69616073, w: -0.00088643975}
   m_LocalPosition: {x: -1.4901161e-10, y: -5.2619725e-10, z: 0}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children:
@@ -32725,7 +32722,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436546855094212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3341405, y: 1.1930587, z: -3.6815886}
+  m_LocalPosition: {x: 118.449524, y: 82.43683, z: 134.14941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4712090414504626}
@@ -41308,19 +41305,6 @@ MonoBehaviour:
   zhController: {fileID: 114952122687043828}
   probOfConvertToZombie: 0.3
   canPick: 0
---- !u!114 &114325296790199972
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1436546855094212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e280489188b49394aaa78376135c46f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 1890618332105812}
-  cam: {fileID: 0}
 --- !u!114 &114361747333199736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41455,7 +41439,7 @@ MonoBehaviour:
   componentsToDisable:
   - {fileID: 114361747333199736}
   - {fileID: 114090270364747846}
-  - {fileID: 114325296790199972}
+  - {fileID: 0}
   - {fileID: 81104933868083182}
   - {fileID: 20277585353043404}
   pistolaPunyo: {fileID: 1361293692379768, guid: 5353f67eb44197d4b89df7162b90fb84,
@@ -41481,30 +41465,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 114222895533701448}
---- !u!114 &114779498491615398
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1436546855094212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72d82ef0c63786f4784b5f4e85a0e79d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  traps: {fileID: 1488667868663842}
---- !u!114 &114809815410832474
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1436546855094212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 032fae5028024574cb5499190bf56065, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUp: {fileID: 1873254124454582}
 --- !u!114 &114836826974269092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41556,21 +41516,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34229bc49fe71e049b27324e3c91b909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pistolaPunyoPickUp: {fileID: 1571796896299616, guid: fdd82ac2501fa77419d8bf839ceaa0bb,
-    type: 2}
-  inZendiaryBombPickUp: {fileID: 1512748623283932, guid: 5262515cd175f5f43b8ab1a6f31f475e,
-    type: 2}
-  offsetRadiusOfDroppedRecurso: 3
   pistolaPunyoGraphics: {fileID: 1441836328860766}
   inZendiaryBombGraphics: {fileID: 1031239029112720}
   isWeapon: 1
   weaponsInventory: {fileID: 1079770286087500}
   trapsInventory: {fileID: 1610314092360506}
   powerUpInventory: {fileID: 1947738859095968}
-  pistolaPunyoSprite: {fileID: 21300000, guid: 206f74a7c413c9a49b5755edaa3f0a49, type: 3}
-  inzendiaryBombSprite: {fileID: 21300000, guid: 2cdbb6091deeb934f8b33fa460ec68f6,
+  pistolaPunyoSprite: {fileID: 21300000, guid: 99706895ab549d1478bab6bf89c226cd, type: 3}
+  inzendiaryBombSprite: {fileID: 21300000, guid: 4cbe90f9c6963ad4aaa9d2d2f22cf8c6,
     type: 3}
-  ztumeSprite: {fileID: 21300000, guid: 5f612e03efd7c024ebb6821f50e4e034, type: 3}
+  ztumeSprite: {fileID: 21300000, guid: 821000ed6e5e38b459960ecaba8b2a03, type: 3}
 --- !u!114 &114952122687043828
 MonoBehaviour:
   m_ObjectHideFlags: 1

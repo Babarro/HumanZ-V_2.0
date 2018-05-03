@@ -11,6 +11,7 @@ public class PlayerInventory : NetworkBehaviour {
 
 	public float offsetRadiusOfDroppedRecurso = 3.0f;
 	*/
+	PlayerMotor playerMotor;
 
 	[SerializeField]
 	GameObject pistolaPunyoGraphics;
@@ -33,6 +34,9 @@ public class PlayerInventory : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		playerMotor = GetComponent<PlayerMotor> ();
+		if (playerMotor == null)
+			Debug.LogError ("PlayerMotor not founded!");
 	}
 	
 	// Update is called once per frame
@@ -63,9 +67,17 @@ public class PlayerInventory : NetworkBehaviour {
 			if (weaponsScript != null)
 				weaponsScript.Activate ();
 		} else {
-			if (trapsScript != null)
-				trapsScript.Activate ();
+			if (trapsScript != null) {
+				playerMotor.stuned = true;
+				Invoke ("PlacingTrap", ((ITrap)trapsScript).GetTimeToPlace());
+			}
+
 		}
+	}
+
+	void PlacingTrap(){
+		playerMotor.stuned = false;
+		trapsScript.Activate ();
 	}
 
 	[Command]
@@ -79,8 +91,10 @@ public class PlayerInventory : NetworkBehaviour {
 			if (weaponsScript != null)
 				weaponsScript.Deactivate ();
 		} else {
-			if (trapsScript != null)
-				trapsScript.Deactivate ();
+			if (trapsScript != null) {
+				playerMotor.stuned = false;
+				CancelInvoke ();
+			}
 		}
 	}
 

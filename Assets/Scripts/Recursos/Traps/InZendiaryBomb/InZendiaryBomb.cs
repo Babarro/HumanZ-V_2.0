@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class InZendiaryBomb : NetworkBehaviour, IActivation {
+public class InZendiaryBomb : NetworkBehaviour, IActivation, ITrap {
 
     //distancia a la que spawnea la trampa respecto al jugador
     float farFromPlayer = 1.5f;
@@ -39,24 +39,11 @@ public class InZendiaryBomb : NetworkBehaviour, IActivation {
 	void Update () {
 		
 	}
-
-	public void Activate()
-    {
-		this.transform.parent.parent.parent.gameObject.GetComponent<PlayerMotor> ().stuned = true;
-		Invoke ("PlacingTrap",timeToPlaceTrap);
-    }
-
+		
 	public void Deactivate(){
-		this.transform.parent.parent.parent.gameObject.GetComponent<PlayerMotor> ().stuned = false;
-		CancelInvoke ();
 	}
 
-	void PlacingTrap(){
-		this.transform.parent.parent.parent.gameObject.GetComponent<PlayerMotor> ().stuned = false;
-		Activation ();
-	}
-
-	void Activation(){
+	public void Activate(){
 		//mejorar estas dos lineas de codigo en el start (da un error inesperado en start)
 		player = this.transform.parent.parent.parent.gameObject;
 		playerInZendiaryBombScript = player.GetComponent<PlayerInZendiaryBomb> ();
@@ -101,6 +88,10 @@ public class InZendiaryBomb : NetworkBehaviour, IActivation {
 			collision.gameObject.GetComponent<PlayerInZendiaryBomb> ().CmdDestroyInZendiaryBomb (this.transform.name);
 			collision.gameObject.GetComponent<PlayerInZendiaryBomb> ().InZendiaryBombEffect (power, stunTime);
 		}
+	}
+
+	public float GetTimeToPlace(){
+		return timeToPlaceTrap;
 	}
 
 }
