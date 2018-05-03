@@ -118,7 +118,7 @@ public class GMSetup : NetworkBehaviour {
 
 		foreach (GameObject human in humanz) {
 			human.GetComponent<PlayerHp> ().RpcSetUp ();
-			human.GetComponent<PlayerSetup> ().RpcSetPosition(new Vector3(0,1,0));
+			human.GetComponent<PlayerSetup> ().RpcSetPosition(new Vector3(-3,1,-5));
 		}
 
 	}

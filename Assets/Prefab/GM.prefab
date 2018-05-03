@@ -83,7 +83,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: 0
   spawnPositionParent: {fileID: 0}
-  uiController: {fileID: 0}
   gmRecursos: {fileID: 114124315494196484}
   canvasPrefab: {fileID: 1213365503943688, guid: 9086536db5ab86c4893bcfdf68902f9a,
     type: 2}
