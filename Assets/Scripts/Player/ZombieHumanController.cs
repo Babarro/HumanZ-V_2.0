@@ -17,6 +17,8 @@ public class ZombieHumanController : NetworkBehaviour {
 	PlayerZtume playerZtume;
 	PlayerMotor playerMotor;
 
+	private UIController uiController;
+
 	[SerializeField]
 	float stunTime;
 
@@ -50,6 +52,10 @@ public class ZombieHumanController : NetworkBehaviour {
 
         isZombie = zombieGO.activeSelf;
     }
+	[ClientRpc]
+	public void RpcSetup(){
+		uiController = GameObject.FindGameObjectWithTag ("Canvas").GetComponent<UIController> ();
+	}
 
     [ClientRpc]
     public void RpcSetForm(bool isZombieEnter)
@@ -65,6 +71,10 @@ public class ZombieHumanController : NetworkBehaviour {
     }
     public void ZombieToHuman()
     {
+		//Desactivar Barra infeccion
+		if(isLocalPlayer)
+			uiController.DesactivarComponenteUI (uiController.barraInfeccion);
+		
 		playerZtume.CancelInvoke ();
 		foreach (MonoBehaviour script in humanGO.GetComponents<MonoBehaviour>()) {
 			script.enabled = true;
@@ -81,6 +91,10 @@ public class ZombieHumanController : NetworkBehaviour {
 
     public void HumanToZombie()
     {
+		//Activar Barra infeccion
+		if(isLocalPlayer)
+			uiController.ActivarComponenteUI (uiController.barraInfeccion);
+		
         zombieGO.SetActive(true);
         humanGO.SetActive(false);
         isZombie = true;

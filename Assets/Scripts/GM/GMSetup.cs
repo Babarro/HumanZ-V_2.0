@@ -99,10 +99,12 @@ public class GMSetup : NetworkBehaviour {
 
 		SpawnCanvas ();
 
+
 		foreach (GameObject player in players) {
 			if (player != null) {
 				player.GetComponent<PlayerInventory> ().RpcSetup();
 				player.GetComponent<PlayerSetup> ().RpcSetUpName (player.GetComponent<PlayerSetup>().playerName);
+				player.GetComponent<ZombieHumanController> ().RpcSetup ();
 			}
 		}
 

@@ -2181,6 +2181,7 @@ MonoBehaviour:
   TrampaPanel: {fileID: 1033542515659220}
   PowerUpPanel: {fileID: 1557041592374078}
   ArmaPanel: {fileID: 1644394874030734}
+  barraInfeccion: {fileID: 1964618772059820}
   oneZombie: 0
   timeTextUI: {fileID: 114819568104233738}
   gameDuration: 300
@@ -3432,7 +3433,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1171689340772768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04602556, y: 0.4127699, z: 0}
+  m_LocalPosition: {x: -0.04602413, y: 0.4127699, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224823919934510394}
@@ -3440,7 +3441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.43541217, y: 0.06846018}
   m_AnchorMax: {x: 0.45663914, y: 0.106000006}
-  m_AnchoredPosition: {x: -0.099999905, y: 0}
+  m_AnchoredPosition: {x: -0.099998474, y: 0}
   m_SizeDelta: {x: 0.3670044, y: -0.11331177}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224053938730564204
@@ -4428,7 +4429,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1810786687425308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2754941, y: 0.17505881, z: 0}
+  m_LocalPosition: {x: -0.27549103, y: 0.17506191, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224368355267419320}
@@ -4436,7 +4437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5388781, y: 0.059769914}
   m_AnchorMax: {x: 0.6121101, y: 0.19011235}
-  m_AnchoredPosition: {x: -0.2, y: -0.20000005}
+  m_AnchoredPosition: {x: -0.19999695, y: -0.19999695}
   m_SizeDelta: {x: -0.6100006, y: -0.6100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224798245623646866
@@ -4637,7 +4638,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852095429416746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12398261, y: 0.17509866, z: 0}
+  m_LocalPosition: {x: -0.12397951, y: 0.17510176, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224823919934510394}
@@ -4645,7 +4646,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38720906, y: 0.059690274}
   m_AnchorMax: {x: 0.4607561, y: 0.19011235}
-  m_AnchoredPosition: {x: -0.20000005, y: -0.20000005}
+  m_AnchoredPosition: {x: -0.19999695, y: -0.19999695}
   m_SizeDelta: {x: -0.6100006, y: -0.6100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224987589834322724

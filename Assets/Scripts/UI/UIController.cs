@@ -20,6 +20,7 @@ public class UIController : NetworkBehaviour {
 	public GameObject TrampaPanel;
 	public GameObject PowerUpPanel;
 	public GameObject ArmaPanel;
+	public GameObject barraInfeccion;
 
 
 	private GameObject[] listaPlayers;
