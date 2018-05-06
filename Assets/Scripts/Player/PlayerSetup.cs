@@ -31,7 +31,7 @@ public class PlayerSetup : NetworkBehaviour {
     private void Awake()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+		Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Start()
