@@ -43,13 +43,21 @@ public class PlayerHp : NetworkBehaviour {
 	}
 
 	[ClientRpc]
-	public void RpcSetUp(){
+	public void RpcSetUpFirst(){
 		if (!isLocalPlayer)
 			return;
 		//hpBar = GameObject.FindGameObjectWithTag ("HpBar").GetComponent<Text> ();
 		hpBar = GameObject.FindGameObjectWithTag ("HpBar").GetComponent<Slider> ();
 		timeScript = GameObject.FindGameObjectWithTag ("Canvas").GetComponent<UIController> ();
 		//hpBarStartSize = hpBar.value;
+
+	}
+
+	[ClientRpc]
+	public void RpcSetUpFinal(){
+		if (!isLocalPlayer)
+			return;
+		
 		SetStartTime();
 
 		canChangeBar = true;

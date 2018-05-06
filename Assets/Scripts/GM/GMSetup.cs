@@ -102,6 +102,7 @@ public class GMSetup : NetworkBehaviour {
 
 		foreach (GameObject player in players) {
 			if (player != null) {
+				player.GetComponent<PlayerHp> ().RpcSetUpFirst();
 				player.GetComponent<PlayerInventory> ().RpcSetup();
 				player.GetComponent<PlayerSetup> ().RpcSetUpName (player.GetComponent<PlayerSetup>().playerName);
 				player.GetComponent<ZombieHumanController> ().RpcSetup ();
@@ -130,12 +131,12 @@ public class GMSetup : NetworkBehaviour {
 	
 		foreach (GameObject zombie in zombies) {
 			if (zombie != null) {
-				zombie.GetComponent<PlayerHp> ().RpcSetUp();
+				zombie.GetComponent<PlayerHp> ().RpcSetUpFinal();
 			}
 		}
 
 		foreach (GameObject human in humanz) {
-			human.GetComponent<PlayerHp> ().RpcSetUp ();
+			human.GetComponent<PlayerHp> ().RpcSetUpFinal ();
 			human.GetComponent<PlayerSetup> ().RpcSetPosition(new Vector3(-3,1,-5));
 		}
 

@@ -48,6 +48,5 @@ public class GMEndGameController : MonoBehaviour {
 			uiController.RpcLooseGame();
 		}
 		uiController.numberOfZombie = numberOfPlayers - humanzs;
-		Debug.Log ("Humanzs "+humanzs);
 	}
 }

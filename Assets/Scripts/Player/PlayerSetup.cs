@@ -141,6 +141,5 @@ public class PlayerSetup : NetworkBehaviour {
 	[ClientRpc]
 	public void RpcDeactivateLoadingScreen(){
 		LobbyManager.s_Singleton.SetLoadingScreen (false);
-		Debug.Log ("llega");
 	}
 }
