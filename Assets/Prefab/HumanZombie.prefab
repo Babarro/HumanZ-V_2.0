@@ -24997,7 +24997,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356459744774380}
-  m_LocalRotation: {x: 0.0030425945, y: 0.71787894, z: -0.69616073, w: -0.0008864396}
+  m_LocalRotation: {x: 0.0030425945, y: 0.717879, z: -0.6961608, w: -0.0008864396}
   m_LocalPosition: {x: -1.4901161e-10, y: -5.2619725e-10, z: 0}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children:
@@ -33588,7 +33588,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1714059997462954}
-  m_LocalRotation: {x: 0.61318934, y: 0.6132037, z: -0.35211658, w: 0.352128}
+  m_LocalRotation: {x: 0.6131893, y: 0.61320364, z: -0.35211655, w: 0.35212797}
   m_LocalPosition: {x: -0.00037995423, y: 0.00049428036, z: 0.00076176465}
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_Children:
@@ -41445,9 +41445,8 @@ MonoBehaviour:
   componentsToDisable:
   - {fileID: 114361747333199736}
   - {fileID: 114090270364747846}
-  - {fileID: 0}
-  - {fileID: 81104933868083182}
   - {fileID: 20277585353043404}
+  - {fileID: 81104933868083182}
   pistolaPunyo: {fileID: 1361293692379768, guid: 5353f67eb44197d4b89df7162b90fb84,
     type: 2}
   weapons: {fileID: 1890618332105812}

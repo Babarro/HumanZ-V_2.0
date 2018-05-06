@@ -54,6 +54,9 @@ namespace Prototype.NetworkLobby
 
         protected LobbyHook _lobbyHooks;
 
+		[SerializeField]
+		GameObject loadingScreenGO;
+
         void Start()
         {
             s_Singleton = this;
@@ -67,6 +70,10 @@ namespace Prototype.NetworkLobby
 
             SetServerInfo("Offline", "None");
         }
+
+		public void SetLoadingScreen(bool activate){
+			loadingScreenGO.SetActive (activate);
+		}
 
         public override void OnLobbyClientSceneChanged(NetworkConnection conn)
         {
@@ -391,6 +398,7 @@ namespace Prototype.NetworkLobby
                 if (lobbySlots[i] != null)
                 {
                     (lobbySlots[i] as LobbyPlayer).RpcUpdateCountdown(0);
+					(lobbySlots[i] as LobbyPlayer).RpcActivateLoadingScreen ();
                 }
             }
 

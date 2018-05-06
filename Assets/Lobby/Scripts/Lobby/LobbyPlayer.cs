@@ -312,5 +312,10 @@ namespace Prototype.NetworkLobby
             }
         }
 
+		[ClientRpc]
+		public void RpcActivateLoadingScreen(){
+			LobbyManager.s_Singleton.SetLoadingScreen (true);
+		}
+
     }
 }

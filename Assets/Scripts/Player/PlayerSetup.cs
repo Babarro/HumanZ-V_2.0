@@ -2,6 +2,7 @@
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Prototype.NetworkLobby;
 
 public class PlayerSetup : NetworkBehaviour {
 
@@ -135,5 +136,11 @@ public class PlayerSetup : NetworkBehaviour {
 	public void RpcSetUpName(string name){
 		playerNameText.text = name;
 		playerTextName.SetUpCamera ();
+	}
+
+	[ClientRpc]
+	public void RpcDeactivateLoadingScreen(){
+		LobbyManager.s_Singleton.SetLoadingScreen (false);
+		Debug.Log ("llega");
 	}
 }

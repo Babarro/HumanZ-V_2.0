@@ -45,7 +45,7 @@ public class GMSetup : NetworkBehaviour {
 	void OnPlayersReady(){
 		GameObject[] playersList = GameObject.FindGameObjectsWithTag ("Player");
 		List<GameObject> humanzPlayers = new List<GameObject> ();
-		SetUpBeforePhaseTime (playersList);
+		SetUpFirst (playersList);
 
 		//Se convierten en Humanz dos jugadores aleatorios
 		int numberOfHumanzs = Mathf.Clamp(playersList.Length / 5,1,2);
@@ -79,6 +79,7 @@ public class GMSetup : NetworkBehaviour {
 		SetTimers ();
 		GetComponent<GMEndGameController> ().SetUp (LobbyManager.s_Singleton._playerNumber,numberOfHumanzs);
 		uiController.RpcStartMessage ();
+		SetUpBeforePhaseTime (playersList,humanzPlayers);
 		StartCoroutine (PhaseTime(playersList,humanzPlayers));
 	}
 		
@@ -94,7 +95,7 @@ public class GMSetup : NetworkBehaviour {
 		Destroy (this);
 	}
 
-	void SetUpBeforePhaseTime(GameObject[] players){
+	void SetUpFirst(GameObject[] players){
 
 		SpawnCanvas ();
 
@@ -103,6 +104,21 @@ public class GMSetup : NetworkBehaviour {
 				player.GetComponent<PlayerInventory> ().RpcSetup();
 				player.GetComponent<PlayerSetup> ().RpcSetUpName (player.GetComponent<PlayerSetup>().playerName);
 			}
+		}
+
+
+	}
+
+	void SetUpBeforePhaseTime(GameObject[] zombies, List<GameObject> humanz){
+		
+		foreach (GameObject zombie in zombies) {
+			if (zombie != null) {
+				zombie.GetComponent<PlayerSetup> ().RpcDeactivateLoadingScreen();
+			}
+		}
+
+		foreach (GameObject human in humanz) {
+			human.GetComponent<PlayerSetup> ().RpcDeactivateLoadingScreen();
 		}
 
 
@@ -131,4 +147,5 @@ public class GMSetup : NetworkBehaviour {
 		GetComponent<GMCurasController> ().uiController = uiController;
 		GetComponent<GMCurasController> ().SetUp ();
 	}
+
 }
