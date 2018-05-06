@@ -26,6 +26,7 @@ public class PlayerInventory : NetworkBehaviour {
 
 	[SerializeField]
 	GameObject weaponsInventory, trapsInventory, powerUpInventory;
+	private Animator animator;
 
 	UIInventoryController uiInventoryController;
 
@@ -35,6 +36,7 @@ public class PlayerInventory : NetworkBehaviour {
 	// Use this for initialization
 	void Start () {
 		playerMotor = GetComponent<PlayerMotor> ();
+		animator = GetComponent<Animator> ();
 		if (playerMotor == null)
 			Debug.LogError ("PlayerMotor not founded!");
 	}
@@ -69,6 +71,9 @@ public class PlayerInventory : NetworkBehaviour {
 		} else {
 			if (trapsScript != null) {
 				playerMotor.stuned = true;
+				//Activar anim
+				Debug.Log ("Colocando trampa");
+				animator.SetBool("ColocandoTrampa", true);
 				Invoke ("PlacingTrap", ((ITrap)trapsScript).GetTimeToPlace());
 			}
 
@@ -76,6 +81,9 @@ public class PlayerInventory : NetworkBehaviour {
 	}
 
 	void PlacingTrap(){
+		//Colocar trampa
+		animator.SetTrigger("ColocarTrampa");
+		animator.SetBool ("ColocandoTrampa", false);
 		playerMotor.stuned = false;
 		trapsScript.Activate ();
 	}
@@ -93,6 +101,8 @@ public class PlayerInventory : NetworkBehaviour {
 		} else {
 			if (trapsScript != null) {
 				playerMotor.stuned = false;
+				//Cancelar anim trampa
+				animator.SetBool("ColocandoTrampa", false);
 				CancelInvoke ();
 			}
 		}
