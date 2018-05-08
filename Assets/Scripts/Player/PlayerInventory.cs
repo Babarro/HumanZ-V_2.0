@@ -72,8 +72,9 @@ public class PlayerInventory : NetworkBehaviour {
 			if (trapsScript != null) {
 				playerMotor.stuned = true;
 				//Activar anim
-				Debug.Log ("Colocando trampa");
 				animator.SetBool("ColocandoTrampa", true);
+				if(isLocalPlayer)
+					uiInventoryController.StartTimer (((ITrap)trapsScript).GetTimeToPlace());
 				Invoke ("PlacingTrap", ((ITrap)trapsScript).GetTimeToPlace());
 			}
 
@@ -84,6 +85,8 @@ public class PlayerInventory : NetworkBehaviour {
 		//Colocar trampa
 		animator.SetTrigger("ColocarTrampa");
 		animator.SetBool ("ColocandoTrampa", false);
+		if(isLocalPlayer)
+			uiInventoryController.StopTimer ();
 		playerMotor.stuned = false;
 		trapsScript.Activate ();
 	}
@@ -101,6 +104,8 @@ public class PlayerInventory : NetworkBehaviour {
 		} else {
 			if (trapsScript != null) {
 				playerMotor.stuned = false;
+				if(isLocalPlayer)
+					uiInventoryController.StopTimer ();
 				//Cancelar anim trampa
 				animator.SetBool("ColocandoTrampa", false);
 				CancelInvoke ();

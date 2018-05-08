@@ -57,7 +57,7 @@ public class UIController : NetworkBehaviour {
 				
 		}
 
-		timeTextUI.text = ((gameDuration - (int)(time - startTime))/60).ToString() +":"+ ((gameDuration - (int)(time - startTime))%60).ToString();
+		timeTextUI.text = ((gameDuration - (int)(time - startTime))/60).ToString() +":"+ ((gameDuration - (int)(time - startTime))%60).ToString("D2");
 	}
 
 	[ClientRpc]

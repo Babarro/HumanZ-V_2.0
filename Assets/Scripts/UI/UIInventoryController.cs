@@ -22,6 +22,12 @@ public class UIInventoryController : MonoBehaviour {
 	[SerializeField]
 	GameObject inUseTrap;
 
+	//Timer
+	[SerializeField]
+	Text timerText;
+	float totalTime = 0.0f;
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -29,7 +35,6 @@ public class UIInventoryController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
 	public void SetInUse(bool isWeaponInUse){
@@ -135,4 +140,19 @@ public class UIInventoryController : MonoBehaviour {
 		trapText1.enabled = false;
 	}
 		
+	public void StartTimer(float time){
+		totalTime = time;
+		timerText.enabled = true;
+		InvokeRepeating ("CountDownTime",0,0.1f);
+	}
+
+	public void StopTimer(){
+		CancelInvoke();
+		timerText.enabled = false;
+	}
+
+	void CountDownTime(){
+		timerText.text = totalTime.ToString("F2");
+		totalTime -= 0.1f;
+	}
 }
