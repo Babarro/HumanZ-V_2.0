@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class ExtractionPoint : MonoBehaviour {
+public class ExtractionPoint : NetworkBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -18,9 +19,10 @@ public class ExtractionPoint : MonoBehaviour {
 
 		if (other.tag == "Player") {
 			if (other.GetComponent<ZombieHumanController> ().isZombie && other.GetComponent<PlayerSetup>().isLocalPlayer) {
-				GMEndGameController.instance.CmdExtractionPointTaken (other.gameObject.name);
+				other.gameObject.GetComponent<PlayerEndGameController>().ExtractPointToServer (other.name);
 			}
 		}
 
 	}
+		
 }

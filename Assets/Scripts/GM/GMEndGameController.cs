@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class GMEndGameController : MonoBehaviour {
+public class GMEndGameController : NetworkBehaviour {
 
 	[SerializeField]
 	GMRecursos gmRecursos;
@@ -69,19 +69,5 @@ public class GMEndGameController : MonoBehaviour {
 		gmCurasController.DeactivateAllCuras ();
 
 	}
-
-	public void CmdExtractionPointTaken(string playerName){
-		GameObject[] playersList = GameObject.FindGameObjectsWithTag ("Player");
-		foreach (GameObject player in playersList) {
-			if (player.name == playerName) {
-			
-				
-
-			} else {
-			
-
-
-			}
-		}
-	}
+		
 }

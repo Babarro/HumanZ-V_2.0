@@ -8988,6 +8988,7 @@ GameObject:
   - component: {fileID: 114428459369766074}
   - component: {fileID: 114863984632454034}
   - component: {fileID: 114120865127424756}
+  - component: {fileID: 114953762428231354}
   m_Layer: 0
   m_Name: HumanZombie
   m_TagString: Player
@@ -24997,7 +24998,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356459744774380}
-  m_LocalRotation: {x: 0.0030425945, y: 0.717879, z: -0.6961608, w: -0.0008864396}
+  m_LocalRotation: {x: 0.003042594, y: 0.71787894, z: -0.69616073, w: -0.00088643946}
   m_LocalPosition: {x: -1.4901161e-10, y: -5.2619725e-10, z: 0}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children:
@@ -33588,7 +33589,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1714059997462954}
-  m_LocalRotation: {x: 0.6131893, y: 0.61320364, z: -0.35211655, w: 0.35212797}
+  m_LocalRotation: {x: 0.61318934, y: 0.6132037, z: -0.35211658, w: 0.352128}
   m_LocalPosition: {x: -0.00037995423, y: 0.00049428036, z: 0.00076176465}
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_Children:
@@ -41546,6 +41547,17 @@ MonoBehaviour:
   humanGO: {fileID: 1748095847748122}
   isZombie: 0
   stunTime: 3
+--- !u!114 &114953762428231354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436546855094212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aede83c184097194394f51a8dbfb7af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &124207593499745738
 Behaviour:
   m_ObjectHideFlags: 1

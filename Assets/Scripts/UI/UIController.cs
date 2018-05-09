@@ -100,6 +100,19 @@ public class UIController : NetworkBehaviour {
 		if(isLocalPlayer)
 			winPanel.SetActive (true);
 	}
+		
+	public void LooseGame(){
+		loosePanel.SetActive (true);
+
+		Debug.Log ("loose");
+	}
+		
+	public void WinGame(){
+		winPanel.SetActive (true);
+
+
+		Debug.Log ("win");
+	}
 
 	void OnZombiesLeftChange(int numberOfZombie){
 		numberOfZombiesLeftUI.text = numberOfZombie.ToString();
