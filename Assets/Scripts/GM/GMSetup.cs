@@ -148,7 +148,7 @@ public class GMSetup : NetworkBehaviour {
 		uiController = canvas.GetComponent<UIController> ();
 		gmRecursos.uiController = uiController;
 		GetComponent<GMCurasController> ().uiController = uiController;
-		GetComponent<GMCurasController> ().SetUp ();
+
 	}
 
 }
