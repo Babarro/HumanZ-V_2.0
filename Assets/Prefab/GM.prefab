@@ -99,9 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gmRecursos: {fileID: 114124315494196484}
+  gmCurasController: {fileID: 114859993667498878}
   numberOfPlayers: 0
   humanzs: 0
   timeLastZombieHasToSurvive: 10
+  extractionPointPosParent: {fileID: 0}
+  extractionPointPrefab: {fileID: 1447157455137278, guid: 66c02ad4a2ff277459bad4f0e0df8103,
+    type: 2}
 --- !u!114 &114469134331843688
 MonoBehaviour:
   m_ObjectHideFlags: 1

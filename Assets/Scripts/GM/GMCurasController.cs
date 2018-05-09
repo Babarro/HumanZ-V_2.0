@@ -83,4 +83,12 @@ public class GMCurasController : NetworkBehaviour {
 			curasParent.transform.GetChild (curaToActivate).GetComponent<CuraCollision> ().RpcEnableCura ();
 		}
 	}
+
+	public void DeactivateAllCuras(){
+		for (int i = 0; i < activeCurasAtTheSameTime; i++) {
+			curasParent.transform.GetChild (lastCuras[i]).GetComponent<CuraCollision> ().RpcDisableCura ();
+			lastCuras [i] = -1;
+		}
+		canStart = false;
+	}
 }

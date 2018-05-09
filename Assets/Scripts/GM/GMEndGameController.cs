@@ -1,17 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class GMEndGameController : MonoBehaviour {
 
 	[SerializeField]
 	GMRecursos gmRecursos;
+	[SerializeField]
+	GMCurasController gmCurasController;
 
 	public int numberOfPlayers;
 	public int humanzs;
 	UIController uiController;
 	public static GMEndGameController instance;
-	public int timeLastZombieHasToSurvive =10;
+	public int timeLastZombieHasToSurvive = 10;
+
+	[SerializeField]
+	GameObject extractionPointPosParent;
+	[SerializeField]
+	GameObject extractionPointPrefab;
+
 
 	void Awake(){
 		if (instance == null)
@@ -46,7 +55,33 @@ public class GMEndGameController : MonoBehaviour {
 			uiController.oneZombie = true;
 		}else if(humanzs == numberOfPlayers){
 			uiController.RpcLooseGame();
+			uiController.endOfGame = true;
 		}
 		uiController.numberOfZombie = numberOfPlayers - humanzs;
+	}
+
+	public void ExtractionPoint(){
+	
+		int posPoint = Random.Range (0,extractionPointPosParent.transform.childCount);
+
+		GameObject extractionPoint = Instantiate(extractionPointPrefab,extractionPointPosParent.transform.GetChild(posPoint).transform.position, Quaternion.identity) as GameObject;
+		NetworkServer.Spawn (extractionPoint);
+		gmCurasController.DeactivateAllCuras ();
+
+	}
+
+	public void CmdExtractionPointTaken(string playerName){
+		GameObject[] playersList = GameObject.FindGameObjectsWithTag ("Player");
+		foreach (GameObject player in playersList) {
+			if (player.name == playerName) {
+			
+				
+
+			} else {
+			
+
+
+			}
+		}
 	}
 }

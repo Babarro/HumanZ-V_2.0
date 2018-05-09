@@ -43,6 +43,9 @@ public class UIController : NetworkBehaviour {
 	[SyncVar(hook = "OnZombiesLeftChange")]
 	public int numberOfZombie = 0;
 
+	[SyncVar]
+	public bool endOfGame = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -50,10 +53,19 @@ public class UIController : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (endOfGame)
+			return;
+
 		if (isServer) {
 			time += Time.deltaTime; 
-			if (gameDuration - (int)(time - startTime) <= 0)
-				RpcEndGame ();
+			if (gameDuration - (int)(time - startTime) <= 0) {
+				if (oneZombie)
+					RpcEndGame ();
+				else
+					GMEndGameController.instance.ExtractionPoint ();
+			
+				endOfGame = true;
+			}
 				
 		}
 
@@ -79,7 +91,14 @@ public class UIController : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcLooseGame(){
-		loosePanel.SetActive (true);
+		if(isLocalPlayer)
+			loosePanel.SetActive (true);
+	}
+
+	[ClientRpc]
+	public void RpcWinGame(){
+		if(isLocalPlayer)
+			winPanel.SetActive (true);
 	}
 
 	void OnZombiesLeftChange(int numberOfZombie){
