@@ -19,6 +19,9 @@ public class GMSetup : NetworkBehaviour {
 	[SerializeField]
 	GameObject canvasPrefab;
 
+	[SerializeField]
+	GameObject iaZombieHumanPref;
+
 	public float lootPhaseTime = 10f;
 
 	bool hasEnter = false;
@@ -69,11 +72,13 @@ public class GMSetup : NetworkBehaviour {
 
 			}
 		}
-
 		foreach (GameObject human in humanzPlayers) {
 			human.GetComponent<PlayerSetup> ().RpcSetPosition(new Vector3(122,-79,-141));
 		}
 
+
+		//Se instancian las ias
+		SpawnIA(numberOfHumanzs);
 
 		gmRecursos.SpawnRecursos ();
 		SetTimers ();
@@ -149,6 +154,13 @@ public class GMSetup : NetworkBehaviour {
 		gmRecursos.uiController = uiController;
 		GetComponent<GMCurasController> ().uiController = uiController;
 
+	}
+
+	void SpawnIA(int numberOfHumanzs){
+		for (int i = players-numberOfHumanzs; i < spawnPositionParent.transform.childCount; i++) {
+			GameObject newIa = Instantiate(iaZombieHumanPref,spawnPositionParent.transform.GetChild(i).transform.position,Quaternion.identity) as GameObject;
+			NetworkServer.Spawn (newIa);
+		}
 	}
 
 }
