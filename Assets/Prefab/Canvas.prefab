@@ -2217,7 +2217,7 @@ MonoBehaviour:
   barraInfeccion: {fileID: 1964618772059820}
   oneZombie: 0
   timeTextUI: {fileID: 114819568104233738}
-  gameDuration: 30
+  gameDuration: 300
   time: 0
   startTime: -1
   numberOfZombie: 0
