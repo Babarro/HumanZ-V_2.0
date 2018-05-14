@@ -16,11 +16,13 @@ public class RecibirImpacto : NetworkBehaviour {
 
 	private CharacterController charCtrl;
 	private Animator animator;
+	private ParticlesManager particlesManager;
 
 	// Use this for initialization
 	void Start () {
 		charCtrl = GetComponent<CharacterController> ();
 		animator = GetComponent<Animator> ();
+		particlesManager = GetComponent<ParticlesManager> ();
 	}
 	
 	// Update is called once per frame
@@ -43,8 +45,7 @@ public class RecibirImpacto : NetworkBehaviour {
 			} else {
 				animator.SetBool ("Quemado", false);
 			}
-
-
+				
 		}
 	}
 
@@ -57,11 +58,32 @@ public class RecibirImpacto : NetworkBehaviour {
 		Impact (direccion, force);
 	}
 
+	//Se llama en el server cuando un jugador es empujado
+	[Command]
+	void CmdOnFire(){
+		RpcDoFireEffect ();
+	}
+
+	//Se llama en todos los clientes, cuando se tiene que hace el efecto de fuego
+	[ClientRpc]
+	void RpcDoFireEffect(){
+		particlesManager.fireFX.Play ();
+		//StartCoroutine (StopParticleSystem (particlesManager.fireFX, 2.0f));
+	}
+
+	IEnumerator StopParticleSystem (ParticleSystem particle, float sec){
+		yield return new WaitForSeconds (sec);
+		particle.Stop ();
+	}
+
 	void Impact(Vector3 direccion, float force){
 		if (!isLocalPlayer)
 			return;
 
 		animator.SetBool ("Quemado", true);
+
+		//Estamos quemando, llama al metodo OnFire en el server
+		CmdOnFire ();
 
 		direccion.Normalize ();
 		tiempoInicial = Time.time;
@@ -74,54 +96,7 @@ public class RecibirImpacto : NetworkBehaviour {
 		vecImpacto2 = (direccion.normalized * force / masa); 
 	}
 
-	public static float EaseOutCubic(float start, float end, float value)
-	{
-		value--;
-		end -= start;
-		return end * (value * value * value + 1) + start;
-	}
 
-	public static float EaseInOutQuint(float start, float end, float value)
-	{
-		value /= .5f;
-		end -= start;
-		if (value < 1) return end * 0.5f * value * value * value * value * value + start;
-		value -= 2;
-		return end * 0.5f * (value * value * value * value * value + 2) + start;
-	}
-
-	public static float EaseOutElastic(float start, float end, float value)
-	{
-		end -= start;
-
-		float d = 1f;
-		float p = d * .3f;
-		float s;
-		float a = 0;
-
-		if (value == 0) return start;
-
-		if ((value /= d) == 1) return start + end;
-
-		if (a == 0f || a < Mathf.Abs(end))
-		{
-			a = end;
-			s = p * 0.25f;
-		}
-		else
-		{
-			s = p / (2 * Mathf.PI) * Mathf.Asin(end / a);
-		}
-
-		return (a * Mathf.Pow(2, -10 * value) * Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p) + end + start);
-	}
-
-	public static float EaseOutQuart(float start, float end, float value)
-	{
-		value--;
-		end -= start;
-		return -end * (value * value * value * value - 1) + start;
-	}
 
 	public static float EaseInOutBounce(float start, float end, float value)
 	{
@@ -161,11 +136,4 @@ public class RecibirImpacto : NetworkBehaviour {
 			return end * (7.5625f * (value) * value + .984375f) + start;
 		}
 	}
-
-	public static float EaseOutExpo(float start, float end, float value)
-	{
-		end -= start;
-		return end * (-Mathf.Pow(2, -10 * value) + 1) + start;
-	}
-
 }
