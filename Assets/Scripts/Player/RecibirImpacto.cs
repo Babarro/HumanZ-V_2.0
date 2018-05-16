@@ -79,6 +79,7 @@ public class RecibirImpacto : NetworkBehaviour {
 
 	[ClientRpc]
 	void RpcDoTornadoEffect(){
+		Debug.Log ("Activar Particula tornado");
 		particlesManager.tornadoFX.Play ();
 	}
 
