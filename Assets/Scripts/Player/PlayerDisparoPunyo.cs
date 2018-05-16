@@ -46,7 +46,7 @@ public class PlayerDisparoPunyo : NetworkBehaviour {
     {
 		//gmScript.PistolaPunyoPush(name, direction, power);
 		GameObject go = GameObject.Find(name);
-		go.GetComponent<RecibirImpacto> ().RpcAddImpact (direction, power);
+		go.GetComponent<RecibirImpacto> ().RpcAddImpact (direction, power, 1);
     }
 
 	[Command]

@@ -41,7 +41,7 @@ public class PlayerInZendiaryBomb : NetworkBehaviour {
 		if (!isLocalPlayer)
 			return;
 		
-		recibirImpactoScript.AddImpact (transform.forward,power);
+		recibirImpactoScript.AddImpact (transform.forward,power,0);
 		StartCoroutine (StunTime(stunTime));
 	}
 

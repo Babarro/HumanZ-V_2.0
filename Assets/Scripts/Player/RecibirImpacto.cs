@@ -44,18 +44,19 @@ public class RecibirImpacto : NetworkBehaviour {
 				vecImpacto2 = Vector3.Lerp (vecImpacto2, Vector3.zero, value * Time.fixedDeltaTime);
 			} else {
 				animator.SetBool ("Quemado", false);
+				animator.SetBool ("Twister", false);
 			}
 				
 		}
 	}
 
 	[ClientRpc]
-	public void RpcAddImpact(Vector3 direccion, float force){
-		Impact (direccion, force);
+	public void RpcAddImpact(Vector3 direccion, float force, int tipo){
+		Impact (direccion, force, tipo);
  	}
 		
-	public void AddImpact(Vector3 direccion, float force){
-		Impact (direccion, force);
+	public void AddImpact(Vector3 direccion, float force, int tipo){
+		Impact (direccion, force, tipo);
 	}
 
 	//Se llama en el server cuando un jugador es empujado
@@ -63,27 +64,43 @@ public class RecibirImpacto : NetworkBehaviour {
 	void CmdOnFire(){
 		RpcDoFireEffect ();
 	}
-
 	//Se llama en todos los clientes, cuando se tiene que hace el efecto de fuego
 	[ClientRpc]
 	void RpcDoFireEffect(){
-		particlesManager.fireFX.Play ();
+		particlesManager.quemadoFX.Play ();
 		//StartCoroutine (StopParticleSystem (particlesManager.fireFX, 2.0f));
 	}
+
+	[Command]
+	void CmdOnTwister()
+	{
+		RpcDoTornadoEffect ();
+	}
+
+	[ClientRpc]
+	void RpcDoTornadoEffect(){
+		particlesManager.tornadoFX.Play ();
+	}
+
 
 	IEnumerator StopParticleSystem (ParticleSystem particle, float sec){
 		yield return new WaitForSeconds (sec);
 		particle.Stop ();
 	}
 
-	void Impact(Vector3 direccion, float force){
+	void Impact(Vector3 direccion, float force, int tipo){
 		if (!isLocalPlayer)
 			return;
+		if (tipo == 1) {
+			animator.SetBool ("Twister", true);
+			CmdOnTwister ();
+		} else if(tipo == 0){
+			animator.SetBool ("Quemado", true);
+			//Estamos quemando, llama al metodo OnFire en el server
+			CmdOnFire ();
+		}
 
-		animator.SetBool ("Quemado", true);
 
-		//Estamos quemando, llama al metodo OnFire en el server
-		CmdOnFire ();
 
 		direccion.Normalize ();
 		tiempoInicial = Time.time;

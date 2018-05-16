@@ -98,7 +98,7 @@ public class PlayerInput : NetworkBehaviour
 		//Aplicar fuerza impacto 
 		if(Input.GetKeyDown(KeyCode.F)){
 			Debug.Log ("Aplicar fuerza");
-			impact.RpcAddImpact (new Vector3 (1, 0, 1), 30);
+			impact.RpcAddImpact (new Vector3 (1, 0, 1), 30, 1);
 		}
 
 		if (Input.GetButtonDown ("Fire1")) {

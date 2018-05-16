@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4061039751952600}
   - component: {fileID: 198095480360790516}
   - component: {fileID: 199033249207751388}
-  - component: {fileID: 114586675473564708}
   - component: {fileID: 114438311071013282}
   m_Layer: 0
   m_Name: Tornado
@@ -56,18 +55,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotation: {x: 0, y: 200, z: 0}
   space: 0
---- !u!114 &114586675473564708
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1440452259890374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd2e8874f60266498a388d7229a1bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnlyDeactivate: 0
 --- !u!198 &198095480360790516
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -80,7 +67,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
