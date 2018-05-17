@@ -10,6 +10,8 @@ public class CuraCollision : NetworkBehaviour {
 	[SerializeField]
 	GameObject lightAllo;
 
+	private ParticleSystem particlesManager;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -25,6 +27,8 @@ public class CuraCollision : NetworkBehaviour {
 		if (other.tag == "Player") {
 			if (other.GetComponent<ZombieHumanController> ().isZombie && other.GetComponent<PlayerSetup>().isLocalPlayer && !taken) {
 				other.GetComponent<PlayerHp> ().SetStartTime ();
+				other.GetComponent<ParticlesManager> ().curaZombie.Play();
+
 				//meshRenderer.material.color = Color.red;
 				lightAllo.SetActive(false);
 				taken = true;
@@ -32,6 +36,17 @@ public class CuraCollision : NetworkBehaviour {
 		}
 
 	}
+
+	/*[Command]
+	void CmdCura()
+	{
+		RpcDoCuraEffect ();
+	}
+
+	[ClientRpc]
+	void RpcDoCuraEffect(){
+		particlesManager.curaZombie.Play ();
+	}*/
 
 	[ClientRpc]
 	public void RpcEnableCura(){
