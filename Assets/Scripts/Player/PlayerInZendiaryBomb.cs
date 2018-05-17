@@ -11,6 +11,8 @@ public class PlayerInZendiaryBomb : NetworkBehaviour {
 	PlayerMotor playerMotorScript;
 	RecibirImpacto recibirImpactoScript;
 
+	public GameObject pisarTrampaFX;
+
 	// Use this for initialization
 	void Start () {
 		playerMotorScript = GetComponent<PlayerMotor> ();
@@ -51,5 +53,18 @@ public class PlayerInZendiaryBomb : NetworkBehaviour {
 		yield return new WaitForSeconds (time);
 		//GetComponent<PlayerMotor> ().stuned = false;
 		playerMotorScript.stuned = false;
+	}
+
+	[Command]
+	public void CmdTrampaPisada(Vector3 pos)
+	{
+		RpcDoPisarTrampaEffect (pos);
+	}
+
+	[ClientRpc]
+	void RpcDoPisarTrampaEffect(Vector3 pos){
+		GameObject trampaSP =  Instantiate (pisarTrampaFX, pos, pisarTrampaFX.transform.rotation)as GameObject;
+		trampaSP.GetComponent<ParticleSystem> ().Play ();
+		Destroy (trampaSP, 1);
 	}
 }
