@@ -16,6 +16,7 @@ public class ZombieHumanController : NetworkBehaviour {
 	PlayerInventory playerInventory;
 	PlayerZtume playerZtume;
 	PlayerMotor playerMotor;
+	ParticlesManager particlesManager;
 
 	private UIController uiController;
 
@@ -43,6 +44,9 @@ public class ZombieHumanController : NetworkBehaviour {
 		playerMotor = GetComponent<PlayerMotor> ();
 		if (playerMotor == null)
 			Debug.LogError ("PlayerMotor not found");
+		particlesManager = GetComponent<ParticlesManager> ();
+		if (particlesManager == null)
+			Debug.LogError ("ParticlesManager not found");	
     }
 
     // Use this for initialization
@@ -84,6 +88,7 @@ public class ZombieHumanController : NetworkBehaviour {
         isZombie = false;
 		playerInventory.DestroyAllItems ();
 		playerInput.ChangeVelocity(isZombie);
+		particlesManager.conversionHuman.Play ();
 		if (isLocalPlayer) {
 			StartCoroutine (StunTime(stunTime));
 		}
