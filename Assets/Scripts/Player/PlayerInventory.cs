@@ -26,7 +26,8 @@ public class PlayerInventory : NetworkBehaviour {
 
 	[SerializeField]
 	GameObject weaponsInventory, trapsInventory, powerUpInventory;
-	private Animator animator;
+
+	Animator animator;
 
 	UIInventoryController uiInventoryController;
 

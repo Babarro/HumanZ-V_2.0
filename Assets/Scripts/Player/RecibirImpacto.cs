@@ -12,7 +12,6 @@ public class RecibirImpacto : NetworkBehaviour {
 	private float tiempoCalc;
 	private float value;
 	private Vector3 newPos;
-	private bool collisionDetected = false;
 
 	private CharacterController charCtrl;
 	private Animator animator;
@@ -79,7 +78,7 @@ public class RecibirImpacto : NetworkBehaviour {
 
 	[ClientRpc]
 	void RpcDoTornadoEffect(){
-		Debug.Log ("Activar Particula tornado");
+		//Debug.Log ("Activar Particula tornado");
 		particlesManager.tornadoFX.Play ();
 	}
 
@@ -101,11 +100,9 @@ public class RecibirImpacto : NetworkBehaviour {
 			CmdOnFire ();
 		}
 
-
-
 		direccion.Normalize ();
 		tiempoInicial = Time.time;
-		Debug.Log ("Tiempo Inicial: " + tiempoInicial);
+		//Debug.Log ("Tiempo Inicial: " + tiempoInicial);
 
 		if (direccion.y < 0)
 			direccion.y = -direccion.y;

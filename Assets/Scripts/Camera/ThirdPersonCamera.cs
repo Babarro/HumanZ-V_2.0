@@ -10,7 +10,6 @@ public class ThirdPersonCamera : MonoBehaviour {
 	public float sensibilidad;
 	public float maxTargetY;
 	public float minTargetY;
-	private bool canMove = false;
 
 	// Use this for initialization
 	void Start () {
@@ -39,8 +38,8 @@ public class ThirdPersonCamera : MonoBehaviour {
 
 			targetToLook.transform.position = targetToLook.position + new Vector3 (0f, yMove, 0f);
 
-			float actualCamY = this.transform.position.y;
-			float nextCamY = this.transform.position.y + (-yMove);
+			//float actualCamY = this.transform.position.y;
+			//float nextCamY = this.transform.position.y + (-yMove);
 		}			
 	}
 

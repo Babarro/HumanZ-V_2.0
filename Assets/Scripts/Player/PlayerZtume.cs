@@ -15,6 +15,7 @@ public class PlayerZtume : NetworkBehaviour
     GameObject traps;
 
 	PlayerZtume playerZtume;
+	ParticlesManager particlesManager;
 
     void Awake()
     {
@@ -29,6 +30,7 @@ public class PlayerZtume : NetworkBehaviour
         if (weapons == null || traps == null)
             Debug.Log("weapons or traps not founded");
 		playerZtume = GetComponent<PlayerZtume> ();
+		particlesManager = GetComponent<ParticlesManager> ();
 		if (playerZtume == null)
 			Debug.LogError ("PlayerZtume not found");
     }
@@ -61,6 +63,7 @@ public class PlayerZtume : NetworkBehaviour
             zombieModel.SetActive(false);
             weapons.SetActive(false);
             traps.SetActive(false);
+			particlesManager.ztumeToHuman.Play ();
         }
     }
 
@@ -76,6 +79,7 @@ public class PlayerZtume : NetworkBehaviour
 			}
             weapons.SetActive(true);
             traps.SetActive(true);
+			particlesManager.ztumeToZombie.Play ();
         }
     }
 
