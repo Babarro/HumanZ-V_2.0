@@ -3224,7 +3224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4158705866393918}
   m_Layer: 0
-  m_Name: ayuntamiento3
+  m_Name: ayuntamiento3_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16973,7 +16973,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795456291116946}
-  m_LocalRotation: {x: -0.65328145, y: 0.27059817, z: 0.27059817, w: 0.6532814}
+  m_LocalRotation: {x: -0.6532815, y: 0.2705982, z: 0.2705982, w: 0.65328145}
   m_LocalPosition: {x: -10.265461, y: 2.5000398, z: -3.8491988}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
