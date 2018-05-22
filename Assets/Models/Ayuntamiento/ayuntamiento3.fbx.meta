@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 203b6c0843352fd4190cd1f5e71036e9
-timeCreated: 1527026473
+guid: aedc6be5cda2c6d4eb223644141860a2
+timeCreated: 1527027280
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -3111,41 +3111,41 @@ ModelImporter:
     3301546: suelo_tipo4d.001
     3301548: tri_portal_exterior
     3301550: tri_portal_interior
-    4300000: Pared_tipo1b_ventana.003
-    4300002: Pared_tipo1b_ventana.002
-    4300004: Pared_tipo1b_esquina.013
-    4300006: Pared_tipo1b_ventana
-    4300008: Pared_tipo1b_esquina.010
-    4300010: Pared_tipo1b_ventana.001
-    4300012: Pared_tipo1b_esquina.009
-    4300014: Pared_tipo1b.232
-    4300016: Pared_tipo1b.058
-    4300018: Pared_tipo1b.044
-    4300020: Pared_tipo1b_esquina.008
-    4300022: Pared_tipo1b.008
-    4300024: Pared_tipo1b.231
-    4300026: Pared_tipo1b.011
-    4300028: Pared_tipo1b.017
-    4300030: Pared_tipo1b.014
-    4300032: Pared_tipo1b_esquina.007
-    4300034: Pared_tipo1b.062
-    4300036: Cube.008
-    4300038: Cube.004
-    4300040: Pared_tipo1b.060
-    4300042: BordePared_tipo2
-    4300044: Pared_tipo1h
-    4300046: Pared_tipo1b.036
-    4300048: Cube.000
-    4300050: Pared_tipo1b.006
-    4300052: Escalera3.009
-    4300054: Escalera3.005
-    4300056: Escalera3.003
-    4300058: ColumnaInteriorEdificio.000
-    4300060: ColumnaInteriorEdificio.003
-    4300062: Bordesueloesquina.000
-    4300064: bordeInterior_esquinaA.001
-    4300066: Bordesueloesquina.002
-    4300068: bordeInterior_esquinaA.000
+    4300000: bordeInterior_esquinaA.000
+    4300002: Pared_tipo1b_ventana.003
+    4300004: Pared_tipo1b_ventana.002
+    4300006: Pared_tipo1b_esquina.013
+    4300008: Pared_tipo1b_ventana
+    4300010: Pared_tipo1b_esquina.010
+    4300012: Pared_tipo1b_ventana.001
+    4300014: Pared_tipo1b_esquina.009
+    4300016: Pared_tipo1b.232
+    4300018: Pared_tipo1b.058
+    4300020: Pared_tipo1b.044
+    4300022: Pared_tipo1b_esquina.008
+    4300024: Pared_tipo1b.008
+    4300026: Pared_tipo1b.231
+    4300028: Pared_tipo1b.011
+    4300030: Pared_tipo1b.017
+    4300032: Pared_tipo1b.014
+    4300034: Pared_tipo1b_esquina.007
+    4300036: Pared_tipo1b.062
+    4300038: Cube.008
+    4300040: Cube.004
+    4300042: Pared_tipo1b.060
+    4300044: BordePared_tipo2
+    4300046: Pared_tipo1h
+    4300048: Pared_tipo1b.036
+    4300050: Cube.000
+    4300052: Pared_tipo1b.006
+    4300054: Escalera3.009
+    4300056: Escalera3.005
+    4300058: Escalera3.003
+    4300060: ColumnaInteriorEdificio.000
+    4300062: ColumnaInteriorEdificio.003
+    4300064: Bordesueloesquina.000
+    4300066: bordeInterior_esquinaA.001
+    4300068: Bordesueloesquina.002
     4300070: bordeInterior_esquinaA.003
     4300072: BombillaTecho.087
     4300074: BombillaTecho.086
