@@ -337,8 +337,12 @@ public class PlayerInventory : NetworkBehaviour {
 		if(!isWeapon){
 			if(trapsGraphics!=null)
 				trapsGraphics.SetActive (false);
-			if(weaponsGraphics!=null)
+			if(weaponsGraphics!=null){
 				weaponsGraphics.SetActive (true);
+				Debug.Log("Activar Layer Weapon");
+				animator.SetLayerWeight (1, 1f); //Layer Weapon
+				animator.SetLayerWeight (2, 0f); //Layer Traps
+			}
 			isWeapon = true;
 		}
 		if(isLocalPlayer)
@@ -350,8 +354,12 @@ public class PlayerInventory : NetworkBehaviour {
 		if (isWeapon) {
 			if(weaponsGraphics!=null)
 				weaponsGraphics.SetActive (false);
-			if(trapsGraphics!=null)
+			if (trapsGraphics != null) {
 				trapsGraphics.SetActive (true);
+				Debug.Log("Activar Layer Traps");
+				animator.SetLayerWeight (1, 0f); //Layer Weapon
+				animator.SetLayerWeight (2, 1f); //Layer Traps
+			}
 			isWeapon = false;
 		}
 		if(isLocalPlayer)
