@@ -269,6 +269,10 @@ public class PlayerInventory : NetworkBehaviour {
 				isWeapon = true;
 			}
 
+			//Cambiar Animator Layer Weapon
+			animator.SetLayerWeight (1, 1f);
+			animator.SetLayerWeight (2, 0f);
+
 			//UI
 			if (isLocalPlayer) {
 				uiInventoryController.SetWeapon1 (pistolaPunyoSprite, pistolaPunyoInstantiate.GetComponent<IActivation> ().GetUses ());
@@ -295,6 +299,10 @@ public class PlayerInventory : NetworkBehaviour {
 					weaponsGraphics.SetActive (false);
 				isWeapon = false;
 			}
+
+			//Cambiar Animator Layer Trap
+			animator.SetLayerWeight (1, 0f);
+			animator.SetLayerWeight (2, 1f);
 
 			//UI
 			if (isLocalPlayer) {
