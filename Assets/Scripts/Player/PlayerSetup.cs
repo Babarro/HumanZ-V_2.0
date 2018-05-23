@@ -27,6 +27,8 @@ public class PlayerSetup : NetworkBehaviour {
 	TextMesh playerNameText;
 	[SerializeField]
 	PlayerTextName playerTextName;
+	[SerializeField]
+	ParticlesManager pManager;
 
     private void Awake()
     {
@@ -126,7 +128,18 @@ public class PlayerSetup : NetworkBehaviour {
 
 		transform.position = pos;
 	}
+	[ClientRpc]
+	public void RpcSetPositionSpecial(Vector3 pos,string cases){
+		if (!isLocalPlayer)
+			return;
 
+		transform.position = pos;
+		switch (cases) {
+		case "HumanAfterLoot":
+			pManager.spawnHumanFX.Play ();
+			break;
+		}
+	}
 	public void SetUpName(string name){
 		playerName = name;
 		//playerNameText.text = name;

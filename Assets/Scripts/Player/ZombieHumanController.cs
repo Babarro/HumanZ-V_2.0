@@ -73,6 +73,7 @@ public class ZombieHumanController : NetworkBehaviour {
             ZombieToHuman();
         }
     }
+
     public void ZombieToHuman()
     {
 		//Desactivar Barra infeccion
@@ -106,6 +107,23 @@ public class ZombieHumanController : NetworkBehaviour {
 		playerHp.SetStartTime ();
 		playerInput.ChangeVelocity(isZombie);
     }
+
+	[ClientRpc]
+	public void RpcSetHuman()
+	{
+		if(isLocalPlayer)
+			uiController.DesactivarComponenteUI (uiController.barraInfeccion);
+
+		playerZtume.CancelInvoke ();
+		foreach (MonoBehaviour script in humanGO.GetComponents<MonoBehaviour>()) {
+			script.enabled = true;
+		}
+		humanGO.SetActive(true);
+		zombieGO.SetActive(false);
+		isZombie = false;
+		playerInventory.DestroyAllItems ();
+		playerInput.ChangeVelocity(isZombie);
+	}
 
     [Command]
     public void CmdChangeForm(string name, bool isZombieEnter)

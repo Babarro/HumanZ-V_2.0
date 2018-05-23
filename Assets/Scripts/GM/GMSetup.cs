@@ -57,7 +57,7 @@ public class GMSetup : NetworkBehaviour {
 			do{
 				lucky = Random.Range (0, playersList.Length);
 			}while(playersList[lucky] == null);
-			playersList [lucky].GetComponent<ZombieHumanController> ().RpcSetForm (false);
+			playersList [lucky].GetComponent<ZombieHumanController> ().RpcSetHuman();
 			humanzPlayers.Add (playersList[lucky]);
 			playersList [lucky] = null;
 		}
@@ -142,7 +142,7 @@ public class GMSetup : NetworkBehaviour {
 
 		foreach (GameObject human in humanz) {
 			human.GetComponent<PlayerHp> ().RpcSetUpFinal ();
-			human.GetComponent<PlayerSetup> ().RpcSetPosition(new Vector3(-3,1,-5));
+			human.GetComponent<PlayerSetup> ().RpcSetPositionSpecial(new Vector3(-3,1,-5),"HumanAfterLoot");
 		}
 
 	}

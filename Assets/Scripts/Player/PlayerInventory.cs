@@ -34,6 +34,10 @@ public class PlayerInventory : NetworkBehaviour {
 
 	[SerializeField]
 	Sprite pistolaPunyoSprite, inzendiaryBombSprite, ztumeSprite;
+	[SerializeField]
+	ZombieHumanController zhController;
+
+	bool canChange = true;
 
 	// Use this for initialization
 	void Start () {
@@ -352,6 +356,8 @@ public class PlayerInventory : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcPressL1(){
+		if (!canChange)
+			return;
 		if (!isWeapon) {
 			if (trapsGraphics != null)
 				trapsGraphics.SetActive (false);
@@ -373,6 +379,8 @@ public class PlayerInventory : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcPressR1(){
+		if (!canChange)
+			return;
 		if (isWeapon) {
 			if (weaponsGraphics != null)
 				weaponsGraphics.SetActive (false);
@@ -414,5 +422,33 @@ public class PlayerInventory : NetworkBehaviour {
 		if (uiInventoryController == null)
 			Debug.LogError ("UIInventoryController not founded!");
 
+	}
+
+	[Command]
+	public void CmdHideInventory(float time){
+		RpcHideInventory (time);
+	}
+
+	[ClientRpc]
+	public void RpcHideInventory(float time){
+		canChange = false;
+		if (isWeapon) {
+			weaponsGraphics.SetActive (false);
+		} else {
+			trapsGraphics.SetActive (false);		
+		}
+		StartCoroutine (ShowInventory(time));
+	}
+
+	IEnumerator ShowInventory(float time){
+		yield return new WaitForSeconds (time);
+		if (zhController.isZombie) {
+			canChange = true;
+			if (isWeapon) {
+				weaponsGraphics.SetActive (true);
+			} else {
+				trapsGraphics.SetActive (true);		
+			}
+		}
 	}
 }

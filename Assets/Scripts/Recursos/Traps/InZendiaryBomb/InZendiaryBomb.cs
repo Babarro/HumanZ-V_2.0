@@ -85,9 +85,11 @@ public class InZendiaryBomb : NetworkBehaviour, IActivation, ITrap {
 	private void OnTriggerEnter(Collider collision)
 	{
 		if (collision.gameObject.tag == "Player") {
-			collision.gameObject.GetComponent<PlayerInZendiaryBomb> ().CmdTrampaPisada (this.transform.position);
-			collision.gameObject.GetComponent<PlayerInZendiaryBomb> ().CmdDestroyInZendiaryBomb (this.transform.name);
-			collision.gameObject.GetComponent<PlayerInZendiaryBomb> ().InZendiaryBombEffect (power, stunTime);
+			PlayerInZendiaryBomb pInzendiary = collision.gameObject.GetComponent<PlayerInZendiaryBomb> ();
+			pInzendiary.CmdTrampaPisada (this.transform.position);
+			pInzendiary.CmdDestroyInZendiaryBomb (this.transform.name);
+			pInzendiary.InZendiaryBombEffect (power, stunTime);
+			collision.gameObject.GetComponent<PlayerInventory> ().CmdHideInventory (stunTime);
 		}
 	}
 
