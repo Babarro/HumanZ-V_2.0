@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -204,7 +205,11 @@ public class PlayerInventory : NetworkBehaviour {
 
 				if (isLocalPlayer)
 					uiInventoryController.DestroyWeapon1 ();
-				
+
+				//Quitar Animator Layers
+				animator.SetLayerWeight (1, 0f);
+				animator.SetLayerWeight (2, 0f);
+
 				Destroy (weaponsScript.GetGameObject());
 				weaponsScript = null;
 				Destroy (weaponsInventory.transform.GetChild (0).gameObject);
@@ -214,6 +219,11 @@ public class PlayerInventory : NetworkBehaviour {
 
 				if (isLocalPlayer)
 					uiInventoryController.DestroyTrap1 ();
+
+				//Quitar Animator Layers
+				animator.SetLayerWeight (1, 0f);
+				animator.SetLayerWeight (2, 0f);
+
 
 				Destroy (trapsScript.GetGameObject());
 				trapsScript =  null;
@@ -342,16 +352,20 @@ public class PlayerInventory : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcPressL1(){
-		if(!isWeapon){
-			if(trapsGraphics!=null)
+		if (!isWeapon) {
+			if (trapsGraphics != null)
 				trapsGraphics.SetActive (false);
-			if(weaponsGraphics!=null){
+			if (weaponsGraphics != null) {
 				weaponsGraphics.SetActive (true);
-				Debug.Log("Activar Layer Weapon");
+				Debug.Log ("Activar Layer Weapon");
 				animator.SetLayerWeight (1, 1f); //Layer Weapon
 				animator.SetLayerWeight (2, 0f); //Layer Traps
 			}
 			isWeapon = true;
+		}
+		if (weaponsScript == null) {
+			animator.SetLayerWeight (1, 0f); //Layer Weapon
+			animator.SetLayerWeight (2, 0f); //Layer Traps
 		}
 		if(isLocalPlayer)
 			uiInventoryController.SetInUse (isWeapon);
@@ -360,16 +374,21 @@ public class PlayerInventory : NetworkBehaviour {
 	[ClientRpc]
 	public void RpcPressR1(){
 		if (isWeapon) {
-			if(weaponsGraphics!=null)
+			if (weaponsGraphics != null)
 				weaponsGraphics.SetActive (false);
 			if (trapsGraphics != null) {
 				trapsGraphics.SetActive (true);
-				Debug.Log("Activar Layer Traps");
+				Debug.Log ("Activar Layer Traps");
 				animator.SetLayerWeight (1, 0f); //Layer Weapon
 				animator.SetLayerWeight (2, 1f); //Layer Traps
 			}
 			isWeapon = false;
 		}
+		if (trapsScript == null) {
+			animator.SetLayerWeight (1, 0f); //Layer Weapon
+			animator.SetLayerWeight (2, 0f); //Layer Traps
+		}
+			
 		if(isLocalPlayer)
 			uiInventoryController.SetInUse (isWeapon);
 	}
