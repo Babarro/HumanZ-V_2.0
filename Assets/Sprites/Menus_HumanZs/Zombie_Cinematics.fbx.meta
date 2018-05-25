@@ -1367,72 +1367,72 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_Pantalon
-    second: {fileID: 2100000, guid: 87348581107a0af46968c046522b5e24, type: 2}
+    second: {fileID: 2100000, guid: ce3bce13533c9e64bb09e0b4bc812942, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_calcetin
-    second: {fileID: 2100000, guid: d1788e85fbd0cb643bb5d847c5819dc6, type: 2}
+    second: {fileID: 2100000, guid: 147f8686085bcff49b6268b8678fe0b9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_camisa
-    second: {fileID: 2100000, guid: 874b0cd602ea0a34f95e3c71fbc9109d, type: 2}
+    second: {fileID: 2100000, guid: 777a4116dc0c4454da8e6972bdd51613, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_chaqueta
-    second: {fileID: 2100000, guid: 6f2496fd4c59a8b408f5759e8c27cd8d, type: 2}
+    second: {fileID: 2100000, guid: 19038b6bce7a1a14c982b56ab005ba25, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_cordones
-    second: {fileID: 2100000, guid: 66c6f39eff33ad1408d3d87ff93a6b9a, type: 2}
+    second: {fileID: 2100000, guid: 20faf9fb57dcf80428e9889551e0049a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_dentadura
-    second: {fileID: 2100000, guid: daff7f24b523da94599f53a572ddcace, type: 2}
+    second: {fileID: 2100000, guid: ae701f4744c277d448e87c62c8bdf474, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_dientes
-    second: {fileID: 2100000, guid: e63ea2342e4f494458b12423e393ca50, type: 2}
+    second: {fileID: 2100000, guid: e720c66d343c2cb43afecb5419bd54f9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_lengua
-    second: {fileID: 2100000, guid: 862c519055a300f459b026175525219a, type: 2}
+    second: {fileID: 2100000, guid: 990721b35658ded43a84c6f4ca565bb4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_metalico
-    second: {fileID: 2100000, guid: 2778e92b299662b4db21ef4764cdd75e, type: 2}
+    second: {fileID: 2100000, guid: 14d90c9921cbdd6478e08a1fcec5c7c3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_ojos
-    second: {fileID: 2100000, guid: 2a2843fcd3c11b740b5b092c55899e47, type: 2}
+    second: {fileID: 2100000, guid: 89b37a7070cb0cd498ea58565e6d5413, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_pelo
-    second: {fileID: 2100000, guid: 072bf95fbb350b442b0d1c64d754966d, type: 2}
+    second: {fileID: 2100000, guid: 26b98eacdd527734eb1317e1ffbc9071, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_piel
-    second: {fileID: 2100000, guid: 750d7cd8a856e6a4aa8590147a045e78, type: 2}
+    second: {fileID: 2100000, guid: 9b00a0934dd29244bb7993f482dba57f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_zapatoSuela
-    second: {fileID: 2100000, guid: f8e013e53c1c0ec4cb094c3ed7c61d93, type: 2}
+    second: {fileID: 2100000, guid: 4970125f54be20f419c4571664049b08, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_zaptato
-    second: {fileID: 2100000, guid: e2ba08625ba053146b781a52c5b4124b, type: 2}
+    second: {fileID: 2100000, guid: d16f8d51008f6ba48994a414b24e2692, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -1470,7 +1470,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
