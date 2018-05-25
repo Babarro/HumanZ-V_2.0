@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 158aeefb6d62c164a92a46a4241b629c
+timeCreated: 1527203453
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Glasnost
+  fontNames:
+  - LETRAS_HUMANZ
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
