@@ -8,6 +8,11 @@ public class PlayerDisparoPunyo : NetworkBehaviour {
 	[SerializeField]
 	PistolaPunyoCollision pistolaPunyoCollisionScript;
 
+	[SerializeField]
+	Animator plAnimator;
+	[SerializeField]
+	BoxCollider pistolaPunyoCollider;
+
 	// Use this for initialization
 	void Start () {
     }
@@ -18,27 +23,26 @@ public class PlayerDisparoPunyo : NetworkBehaviour {
 	}
 
 	[Command]
-	public void CmdPushPunyo(string enterName, float distance, float power){
-		GameObject.Find (enterName).GetComponent<PlayerDisparoPunyo> ().RpcPushPunyo (enterName, distance, power);
+	public void CmdPushPunyo(){
+		//GameObject.Find (enterName).GetComponent<PlayerDisparoPunyo> ().RpcPushPunyo (enterName, distance, power);
+		RpcPushPunyo ();
 	}
 
 	[Command]
-	public void CmdPullPunyo(string enterName, float distance){
-		GameObject.Find (enterName).GetComponent<PlayerDisparoPunyo> ().RpcPullPunyo (enterName, distance);
+	public void CmdPullPunyo(){
+		RpcPullPunyo ();
 	}
 
 	[ClientRpc]
-	public void RpcPushPunyo(string enterName, float distance, float enterPower){
-		if (this.name == enterName) {
-			pistolaPunyoCollisionScript.Push (distance, enterPower);
-		}
+	public void RpcPushPunyo(){
+			//pistolaPunyoCollisionScript.Push (enterPower);
+		pistolaPunyoCollider.enabled = true;
+		plAnimator.SetTrigger("Shoot");
 	}
 
 	[ClientRpc]
-	public void RpcPullPunyo(string enterName, float distance){
-		if (this.name == enterName) {
-			pistolaPunyoCollisionScript.Pull (distance);
-		}
+	public void RpcPullPunyo(){
+		pistolaPunyoCollider.enabled = false;
 	}
 
     [Command]

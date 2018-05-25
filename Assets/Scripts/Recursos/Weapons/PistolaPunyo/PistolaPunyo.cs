@@ -8,8 +8,8 @@ public class PistolaPunyo : MonoBehaviour, IActivation {
 	PlayerDisparoPunyo plDisparoPunyo;
 
 	public int uses = 5;
-	public float power;
-	public float distance; //Distancia a la que llega el arma
+	//public float power;
+	//public float distance; //Distancia a la que llega el arma
 	public float cd; //Tiempo de espera desde que lo utilizas hasta su siguiente uso
 	private bool _canShoot = false;
 
@@ -23,7 +23,7 @@ public class PistolaPunyo : MonoBehaviour, IActivation {
 		if (_canShoot)
 		{
 			if (plDisparoPunyo.isLocalPlayer) {
-				plDisparoPunyo.CmdPushPunyo (plDisparoPunyo.gameObject.name, distance, power);
+				plDisparoPunyo.CmdPushPunyo ();
 				this.transform.parent.parent.parent.GetComponent<PlayerInventory> ().ActualRecursoLessUses();
 			}
 			_canShoot = false;
@@ -52,7 +52,7 @@ public class PistolaPunyo : MonoBehaviour, IActivation {
 	IEnumerator Collect()
 	{
 		yield return new WaitForSeconds(cd);
-		plDisparoPunyo.CmdPullPunyo(plDisparoPunyo.gameObject.name, distance);
+		plDisparoPunyo.CmdPullPunyo();
 		_canShoot = true;
 		if (plDisparoPunyo.isLocalPlayer) {
 			if (uses == 0) {
