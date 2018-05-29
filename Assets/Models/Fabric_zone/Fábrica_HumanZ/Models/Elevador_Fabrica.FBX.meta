@@ -1,24 +1,41 @@
 fileFormatVersion: 2
 guid: 895157c2b5ec7d3418b136efee61ece5
-timeCreated: 1524335997
+timeCreated: 1527596275
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
     4300000: Elevador
-    6400000: //RootNode
-    9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base elevador
+    second: {fileID: 2100000, guid: 0ca3a700a9cba4b45998241ae7310c9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bordes elevador
+    second: {fileID: 2100000, guid: 40cfdff84d3a1104abe4197c7644f145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cuerdas elevador
+    second: {fileID: 2100000, guid: f6406ffa325d8734b9cb76e728b2a6f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Soportes elevador
+    second: {fileID: 2100000, guid: f9e5222044c78004691c9a4b23ee9ff7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -45,7 +62,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -85,7 +102,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

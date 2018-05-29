@@ -1,24 +1,31 @@
 fileFormatVersion: 2
 guid: 7f9e7ede145501d41804fa042bf53871
-timeCreated: 1524335997
+timeCreated: 1527596757
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
     4300000: Suelo_2oPiso_Fabrica
-    6400000: //RootNode
-    9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Bordes suelo 2\xBA piso"
+    second: {fileID: 2100000, guid: 0120d3b3ed450504ca6f2800593735d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Suelo 2\xBA piso"
+    second: {fileID: 2100000, guid: 3ab3dfb4b7c763b478b34df30771b863, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -45,7 +52,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -85,7 +92,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
