@@ -247,7 +247,7 @@ public class PlayerInventory : NetworkBehaviour {
 			weaponsGraphics.SetActive (false);
 		if (trapsGraphics != null)
 			trapsGraphics.SetActive (false);
-		if (weaponsScript != null) {
+		if (weaponsScript != null)
 			weaponsScript = null;
 		if (trapsScript != null) 
 			trapsScript = null;
@@ -255,7 +255,7 @@ public class PlayerInventory : NetworkBehaviour {
 		if(weaponsInventory.transform.childCount != 0){
 			Destroy (weaponsInventory.transform.GetChild (0).gameObject);
 		}
-			if(trapsInventory.transform.childCount != 0){
+		if(trapsInventory.transform.childCount != 0){
 			Destroy (trapsInventory.transform.GetChild (0).gameObject);
 		}
 		if(powerUpInventory.transform.childCount != 0){
