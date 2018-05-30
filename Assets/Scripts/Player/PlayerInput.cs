@@ -95,6 +95,9 @@ public class PlayerInput : NetworkBehaviour
 
 	public void Update()
 	{
+		if (!isLocalPlayer)
+			return;
+		
 		//Aplicar fuerza impacto 
 		if(Input.GetKeyDown(KeyCode.F)){
 			Debug.Log ("Aplicar fuerza");
