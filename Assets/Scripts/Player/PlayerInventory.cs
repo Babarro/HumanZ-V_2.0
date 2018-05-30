@@ -252,13 +252,13 @@ public class PlayerInventory : NetworkBehaviour {
 		if (trapsScript != null) 
 			trapsScript = null;
 		
-		if(weaponsInventory.transform.GetChild(0) != null){
+		if(weaponsInventory.transform.childCount != 0){
 			Destroy (weaponsInventory.transform.GetChild (0).gameObject);
 		}
-		if(trapsInventory.transform.GetChild(0) != null){
+			if(trapsInventory.transform.childCount != 0){
 			Destroy (trapsInventory.transform.GetChild (0).gameObject);
 		}
-		if(powerUpInventory.transform.GetChild(0) != null)
+		if(powerUpInventory.transform.childCount != 0){
 			Destroy (powerUpInventory.transform.GetChild (0).gameObject);
 		}
 
