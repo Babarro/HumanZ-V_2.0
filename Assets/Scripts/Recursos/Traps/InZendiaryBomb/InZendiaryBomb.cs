@@ -89,7 +89,8 @@ public class InZendiaryBomb : NetworkBehaviour, IActivation, ITrap {
 			pInzendiary.CmdTrampaPisada (this.transform.position);
 			pInzendiary.CmdDestroyInZendiaryBomb (this.transform.name);
 			pInzendiary.InZendiaryBombEffect (power, stunTime);
-			collision.gameObject.GetComponent<PlayerInventory> ().CmdHideInventory (stunTime);
+			if(collision.gameObject.GetComponent<ZombieHumanController>().isZombie)
+				collision.gameObject.GetComponent<PlayerInventory> ().CmdHideInventory (stunTime);
 		}
 	}
 
