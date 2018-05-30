@@ -220,7 +220,6 @@ public class PlayerInventory : NetworkBehaviour {
 				Destroy (weaponsInventory.transform.GetChild (0).gameObject);
 			} else {
 				trapsGraphics.SetActive (false);
-				trapsGraphics = null;
 
 				if (isLocalPlayer)
 					uiInventoryController.DestroyTrap1 ();
