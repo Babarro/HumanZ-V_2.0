@@ -9,11 +9,16 @@ public class PlayerMotor : MonoBehaviour {
 	[SerializeField]
 	private Camera cam;
 
+	public Vector3 offsetSperecastCenter;
+	public float maxDistanceSpherecast;
 	private float velocidadVertical;
-	private float gravedad = 14.0f;
-	private float fuerzaSalto = 7.5f;
+	public float gravedad = 14.0f;
+	public float fuerzaSalto = 7.5f;
+	private bool canJump = true;
+	public float timeAnimJump;
 
 	private CharacterController charCtrl;
+
 	[HideInInspector]
 	public Animator animator;
 
@@ -37,11 +42,13 @@ public class PlayerMotor : MonoBehaviour {
 			//Aplicacion de la gravedad 
 			velocidadVertical = -gravedad * Time.deltaTime;
 
-			if (Input.GetButtonDown("Jump")  ) 
+			if (Input.GetButtonDown("Jump") && canJump) 
 			{
 				animator.SetTrigger ("Jump");
 				//Impulso de salto
 				velocidadVertical = fuerzaSalto;
+				StartCoroutine (TimeJump (timeAnimJump));
+
 				//Debug.Log("Entro");
 			}
 		}
@@ -81,11 +88,11 @@ public class PlayerMotor : MonoBehaviour {
 	public bool Grounded()
 	{
 		RaycastHit hit;
-		Vector3 p1 = transform.position + Vector3.up * charCtrl.radius;
+		Vector3 p1 = transform.position + offsetSperecastCenter + Vector3.up * charCtrl.radius;
 		//Vector3 p2 = p1 + Vector3.up * charCtrl.height;
 		bool isGrounded;
 
-		if (Physics.SphereCast(p1, charCtrl.radius , Vector3.down, out hit, 0.05f)) {
+		if (Physics.SphereCast(p1, charCtrl.radius , Vector3.down, out hit, maxDistanceSpherecast)) {
 			isGrounded = true;
 			//Debug.Log("MetodoGrounded -> Estoy en el suelo");
 		} else {
@@ -98,5 +105,11 @@ public class PlayerMotor : MonoBehaviour {
 
 	public Camera getCamera(){
 		return cam;
+	}
+
+	IEnumerator TimeJump(float jumpTime){
+		canJump = false;
+		yield return new WaitForSeconds (jumpTime);
+		canJump = true;
 	}
 }
