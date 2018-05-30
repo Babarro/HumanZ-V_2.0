@@ -94,7 +94,8 @@ public class PlayerInventory : NetworkBehaviour {
 		if(isLocalPlayer)
 			uiInventoryController.StopTimer ();
 		playerMotor.stuned = false;
-		trapsScript.Activate ();
+		if(trapsScript!=null)
+			trapsScript.Activate ();
 	}
 
 	[Command]
@@ -121,6 +122,7 @@ public class PlayerInventory : NetworkBehaviour {
 
 	[Command]
 	public void CmdActivatePowerUp(){
+		Debug.Log ("ztume inventory");
 		RpcActivatePowerUp ();
 	}
 
