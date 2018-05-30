@@ -123,7 +123,6 @@ public class PlayerInput : NetworkBehaviour
 			playerInventory.CmdPressR1 ();
 
 		if (Input.GetKeyDown(KeyCode.B) && zhController.isZombie) {
-			Debug.Log ("activado");
 			playerInventory.CmdActivatePowerUp ();
 		}
 

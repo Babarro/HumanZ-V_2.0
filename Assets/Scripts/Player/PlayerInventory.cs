@@ -122,13 +122,12 @@ public class PlayerInventory : NetworkBehaviour {
 
 	[Command]
 	public void CmdActivatePowerUp(){
-		Debug.Log ("ztume inventory");
 		RpcActivatePowerUp ();
 	}
 
 	[ClientRpc]
 	public void RpcActivatePowerUp(){
-		if (powerUpInventory.transform.childCount <= 0)
+		if (powerUpInventory.transform.childCount <= 0 || !isLocalPlayer)
 			return;
 		powerUpInventory.transform.GetChild (0).GetComponent<IPowerUp>().Activate();
 	}

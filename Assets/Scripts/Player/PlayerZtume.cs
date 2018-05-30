@@ -79,8 +79,7 @@ public class PlayerZtume : NetworkBehaviour
 
 	void ZtumeActivateOnServerCourutine()
 	{
-		PlayerZtume playerZtumeScript = gameObject.GetComponent<PlayerZtume>();
-		playerZtumeScript.RpcDeactivateZtume(this.name);
+		RpcDeactivateZtume(this.name);
 		//playerZtume.RpcDeactivateZtume(this.name);
 	}
 		
