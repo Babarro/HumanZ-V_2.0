@@ -28,8 +28,8 @@ public class PistolaPunyo : MonoBehaviour, IActivation {
 			}
 			_canShoot = false;
 			uses--;
-
-			StartCoroutine("Collect");
+			if(plDisparoPunyo.isLocalPlayer)
+				StartCoroutine("Collect");
 		}
 	}
 
