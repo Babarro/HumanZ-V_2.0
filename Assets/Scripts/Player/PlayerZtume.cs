@@ -13,8 +13,6 @@ public class PlayerZtume : NetworkBehaviour
     GameObject weapons;
     [SerializeField]
     GameObject traps;
-
-	PlayerZtume playerZtume;
 	ParticlesManager particlesManager;
 
     void Awake()
@@ -29,10 +27,7 @@ public class PlayerZtume : NetworkBehaviour
             Debug.Log("zombieModel or zTumeModel not founded");
         if (weapons == null || traps == null)
             Debug.Log("weapons or traps not founded");
-		playerZtume = GetComponent<PlayerZtume> ();
 		particlesManager = GetComponent<ParticlesManager> ();
-		if (playerZtume == null)
-			Debug.LogError ("PlayerZtume not found");
     }
 
     // Update is called once per frame
@@ -44,8 +39,7 @@ public class PlayerZtume : NetworkBehaviour
     [Command]
     public void CmdActivateOnServer(float timeEffect)
     {
-		PlayerZtume playerZtumeScript = gameObject.GetComponent<PlayerZtume>();
-		playerZtumeScript.RpcActivateZtume(this.name);
+		RpcActivateZtume(this.name);
 		//playerZtume.RpcActivateZtume(this.name);
 		//StartCoroutine(ZtumeActivateOnServerCourutine(timeEffect));
 		Invoke("ZtumeActivateOnServerCourutine",timeEffect);
