@@ -25,6 +25,7 @@ public class PlayerInventory : NetworkBehaviour {
 	IActivation weaponsScript;
 	IActivation trapsScript;
 
+
 	[SerializeField]
 	GameObject weaponsInventory, trapsInventory, powerUpInventory;
 
@@ -37,7 +38,7 @@ public class PlayerInventory : NetworkBehaviour {
 	[SerializeField]
 	ZombieHumanController zhController;
 
-	bool canChange = true;
+	public bool canChange = true;
 
 	// Use this for initialization
 	void Start () {
@@ -81,6 +82,7 @@ public class PlayerInventory : NetworkBehaviour {
 				animator.SetBool("ColocandoTrampa", true);
 				if(isLocalPlayer)
 					uiInventoryController.StartTimer (((ITrap)trapsScript).GetTimeToPlace());
+				canChange = false;
 				Invoke ("PlacingTrap", ((ITrap)trapsScript).GetTimeToPlace());
 			}
 
@@ -91,6 +93,7 @@ public class PlayerInventory : NetworkBehaviour {
 		//Colocar trampa
 		animator.SetTrigger("ColocarTrampa");
 		animator.SetBool ("ColocandoTrampa", false);
+		canChange = true;
 		if(isLocalPlayer)
 			uiInventoryController.StopTimer ();
 		playerMotor.stuned = false;
@@ -116,6 +119,7 @@ public class PlayerInventory : NetworkBehaviour {
 				//Cancelar anim trampa
 				animator.SetBool("ColocandoTrampa", false);
 				CancelInvoke ();
+				canChange = true;
 			}
 		}
 	}
@@ -130,6 +134,7 @@ public class PlayerInventory : NetworkBehaviour {
 		if (powerUpInventory.transform.childCount <= 0 || !isLocalPlayer)
 			return;
 		powerUpInventory.transform.GetChild (0).GetComponent<IPowerUp>().Activate();
+		canChange = false;
 	}
 
 	[Command]

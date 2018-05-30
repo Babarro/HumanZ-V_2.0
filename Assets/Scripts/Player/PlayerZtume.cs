@@ -14,6 +14,8 @@ public class PlayerZtume : NetworkBehaviour
     [SerializeField]
     GameObject traps;
 	ParticlesManager particlesManager;
+	[SerializeField]
+	PlayerInventory plInventory;
 
     void Awake()
     {
@@ -73,6 +75,7 @@ public class PlayerZtume : NetworkBehaviour
 			}
             weapons.SetActive(true);
             traps.SetActive(true);
+			plInventory.canChange = true;
 			particlesManager.ztumeToZombie.Play ();
         }
     }
