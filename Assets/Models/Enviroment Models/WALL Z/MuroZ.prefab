@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4139365757032268}
-  - component: {fileID: 95087635397785074}
+  - component: {fileID: 65524206817582936}
   m_Layer: 0
   m_Name: MuroZ
   m_TagString: Untagged
@@ -67,15 +67,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940524331845208}
-  m_LocalRotation: {x: -0, y: 0.9999934, z: -0, w: -0.0036341997}
-  m_LocalPosition: {x: 55.493, y: 1.36, z: -43.928}
-  m_LocalScale: {x: 52.274372, y: 52.27433, z: 52.27433}
+  m_LocalRotation: {x: -0, y: 0.99999, z: -0, w: -0.0044751083}
+  m_LocalPosition: {x: -59.11, y: 0.85000324, z: -86.44}
+  m_LocalScale: {x: 84.77794, y: 84.77778, z: 84.77784}
   m_Children:
   - {fileID: 4312490617821368}
   - {fileID: 4529116831942524}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180.41599, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180.51299, z: 0}
 --- !u!4 &4312490617821368
 Transform:
   m_ObjectHideFlags: 1
@@ -184,20 +184,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1075963205785916}
   m_Mesh: {fileID: 4300000, guid: aefaa3cc08ba2ce43a5722806daf3bdd, type: 3}
---- !u!95 &95087635397785074
-Animator:
-  serializedVersion: 3
+--- !u!65 &65524206817582936
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940524331845208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: aefaa3cc08ba2ce43a5722806daf3bdd, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 2
+  m_Size: {x: 0.036138576, y: 0.22357404, z: 0.10599513}
+  m_Center: {x: 0.24386548, y: 0.095459975, z: -0.02367629}
