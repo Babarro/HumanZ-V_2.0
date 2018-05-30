@@ -122,7 +122,7 @@ public class PlayerInput : NetworkBehaviour
 		if (Input.GetButtonDown ("R1") && zhController.isZombie)
 			playerInventory.CmdPressR1 ();
 
-		if (Input.GetButtonDown ("PowerUp") && zhController.isZombie) {
+		if (Input.GetButtonDown ("Fire1") && zhController.isZombie) {
 			Debug.Log ("activado");
 			playerInventory.CmdActivatePowerUp ();
 		}
