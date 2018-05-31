@@ -225,6 +225,7 @@ public class PlayerInventory : NetworkBehaviour {
 				Destroy (weaponsInventory.transform.GetChild (0).gameObject);
 			} else {
 				trapsGraphics.SetActive (false);
+				trapsGraphics = null;
 
 				if (isLocalPlayer)
 					uiInventoryController.DestroyTrap1 ();
@@ -438,9 +439,11 @@ public class PlayerInventory : NetworkBehaviour {
 	public void RpcHideInventory(float time){
 		canChange = false;
 		if (isWeapon) {
-			weaponsGraphics.SetActive (false);
+			if(weaponsGraphics!=null)
+				weaponsGraphics.SetActive (false);
 		} else {
-			trapsGraphics.SetActive (false);		
+			if(trapsGraphics!=null)
+				trapsGraphics.SetActive (false);		
 		}
 		StartCoroutine (ShowInventory(time));
 	}
