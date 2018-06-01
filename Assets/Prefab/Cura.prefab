@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4138712891035660}
   - component: {fileID: 33505709853288752}
   - component: {fileID: 23343990055112486}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: LightAllo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
