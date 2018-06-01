@@ -9087,6 +9087,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4652467635671308}
   - component: {fileID: 114889076340533908}
+  - component: {fileID: 54480768374464176}
+  - component: {fileID: 65763504148582172}
   m_Layer: 0
   m_Name: IAZombieHuman
   m_TagString: Untagged
@@ -12605,7 +12607,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898090846018010}
-  m_LocalRotation: {x: 0.0030425985, y: 0.717879, z: -0.6961608, w: -0.00088644057}
+  m_LocalRotation: {x: 0.003042598, y: 0.71787894, z: -0.69616073, w: -0.00088644045}
   m_LocalPosition: {x: -1.4901161e-10, y: -5.2619725e-10, z: 0}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children:
@@ -12923,7 +12925,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1644103586179648}
-  m_LocalRotation: {x: 0.6131893, y: 0.61320364, z: -0.35211655, w: 0.35212797}
+  m_LocalRotation: {x: 0.61318934, y: 0.6132037, z: -0.35211658, w: 0.352128}
   m_LocalPosition: {x: -0.00037995423, y: 0.00049428036, z: 0.00076176465}
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_Children:
@@ -19103,6 +19105,33 @@ Transform:
   m_Father: {fileID: 4765174533823606}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54480768374464176
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920411382438378}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65763504148582172
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920411382438378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95066871383083748
 Animator:
   serializedVersion: 3
