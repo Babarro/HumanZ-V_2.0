@@ -78,7 +78,7 @@ Material:
     - _Parallax: 0.02
     - _RampSmooth: 0.07
     - _RampSmoothAdd: 0.75
-    - _RampThreshold: 0.268
+    - _RampThreshold: 0.006
     - _RimMax: 0.85
     - _RimMin: 0.62
     - _RimStrength: 0.01
