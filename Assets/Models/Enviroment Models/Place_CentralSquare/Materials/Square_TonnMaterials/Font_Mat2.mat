@@ -74,11 +74,11 @@ Material:
     - _OcclusionStrength: 1
     - _Offset1: 0
     - _Offset2: 0
-    - _Outline: 0.02
+    - _Outline: 0.009
     - _Parallax: 0.02
-    - _RampSmooth: 0.01
-    - _RampSmoothAdd: 0.75
-    - _RampThreshold: 0.47
+    - _RampSmooth: 0
+    - _RampSmoothAdd: 0.656
+    - _RampThreshold: 0.43
     - _RimMax: 0.85
     - _RimMin: 0.6
     - _RimStrength: 0.5
