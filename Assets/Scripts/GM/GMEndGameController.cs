@@ -54,7 +54,8 @@ public class GMEndGameController : NetworkBehaviour {
 			uiController.gameDuration = timeLastZombieHasToSurvive;
 			uiController.oneZombie = true;
 		}else if(humanzs == numberOfPlayers){
-			uiController.RpcLooseGame();
+			Debug.Log ("llega "+uiController);
+			uiController.RpcLooseGame ();
 			uiController.endOfGame = true;
 		}
 		uiController.numberOfZombie = numberOfPlayers - humanzs;

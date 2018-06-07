@@ -7,7 +7,7 @@ public class PickUpZombie : MonoBehaviour {
 	[SerializeField]
 	ZombieHumanController zhController;
 
-	public float probOfConvertToZombie = 0.3f;
+	public float probOfConvertToZombie = 0.5f;
 
 	public bool canPick = false;
 

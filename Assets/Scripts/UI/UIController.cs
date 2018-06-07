@@ -91,8 +91,7 @@ public class UIController : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcLooseGame(){
-		if(isLocalPlayer)
-			loosePanel.SetActive (true);
+		loosePanel.SetActive (true);
 	}
 
 	[ClientRpc]

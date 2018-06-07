@@ -86,7 +86,6 @@ MonoBehaviour:
   gmRecursos: {fileID: 114124315494196484}
   canvasPrefab: {fileID: 1213365503943688, guid: 9086536db5ab86c4893bcfdf68902f9a,
     type: 2}
-  maxPlayer: 10
   iaZombieHumanPref: {fileID: 1920411382438378, guid: d4e8df8564f79ef48aeeb6c820f43852,
     type: 2}
   lootPhaseTime: 10
@@ -105,7 +104,7 @@ MonoBehaviour:
   gmCurasController: {fileID: 114859993667498878}
   numberOfPlayers: 0
   humanzs: 0
-  timeLastZombieHasToSurvive: 10
+  timeLastZombieHasToSurvive: 20
   extractionPointPosParent: {fileID: 0}
   extractionPointPrefab: {fileID: 1447157455137278, guid: 66c02ad4a2ff277459bad4f0e0df8103,
     type: 2}
