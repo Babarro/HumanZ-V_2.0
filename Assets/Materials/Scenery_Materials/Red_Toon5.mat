@@ -74,7 +74,7 @@ Material:
     - _OcclusionStrength: 1
     - _Offset1: 0
     - _Offset2: 0
-    - _Outline: 0.03
+    - _Outline: -0.05
     - _Parallax: 0.02
     - _RampSmooth: 0.2
     - _RampSmoothAdd: 0.75
@@ -88,9 +88,12 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _TCP2_DISABLE_WRAPPED_LIGHT: 1
+    - _TCP2_OUTLINE_CONST_SIZE: 0
+    - _TCP2_OUTLINE_TEXTURED: 0
     - _TCP2_RAMPTEXT: 0
     - _TCP2_SPEC_TOON: 0
     - _TCP2_STYLIZED_FRESNEL: 0
+    - _TCP2_ZSMOOTH_ON: 0
     - _TexLod: 5
     - _UVSec: 0
     - _ZSmooth: -0.5
@@ -101,6 +104,6 @@ Material:
     - _Color: {r: 0.32068962, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0.18275861, g: 0.055096347, b: 0.11141793, a: 1}
     - _HColor: {r: 0.785, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
     - _SColor: {r: 0.195, g: 0.195, b: 0.195, a: 1}
