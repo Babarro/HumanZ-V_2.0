@@ -21,6 +21,14 @@ public class PlayerInput : NetworkBehaviour
 	[SerializeField]
 	ZombieHumanController zhController;
 
+	//Spectator Camera 
+	public GameObject graphicsHuman;
+	public GameObject graphicsZombie;
+	public GameObject grapichsName;
+	private GameObject canvas;
+	public bool spectatorMode = false;
+	public int updownSpeed = 4;
+
    // private ZombieHumanController zombieHumanController;
 
     private void Awake()
@@ -97,13 +105,21 @@ public class PlayerInput : NetworkBehaviour
 	{
 		if (!isLocalPlayer)
 			return;
-		
+		//Spectator Mode
+		if (Input.GetKeyDown (KeyCode.P)) {
+			//Spectator Mode
+			canvas = GameObject.FindGameObjectWithTag ("Canvas") as GameObject;
+			spectatorMode = true;
+			graphicsHuman.SetActive (false);
+			graphicsZombie.SetActive (false);
+			grapichsName.SetActive (false);
+			canvas.SetActive (false);
+		}
 		//Aplicar fuerza impacto 
 		if(Input.GetKeyDown(KeyCode.F)){
 			Debug.Log ("Aplicar fuerza");
 			impact.RpcAddImpact (new Vector3 (1, 0, 1), 30, 1);
 		}
-
 		if (Input.GetButtonDown ("Fire1")) {
 			if (zhController.isZombie) {
 				playerInventory.CmdActivateRecurso ();
@@ -127,6 +143,17 @@ public class PlayerInput : NetworkBehaviour
 		}
 
 
+	}
+
+	void LateUpdate(){
+		//Spectator Mode
+		if(Input.GetKey(KeyCode.Tab) && spectatorMode)
+		{	
+			transform.position += transform.up * updownSpeed * Time.deltaTime;
+		}
+		if (Input.GetKey (KeyCode.LeftShift) && spectatorMode) {
+			transform.position -= transform.up * updownSpeed * Time.deltaTime;
+		}
 	}
 
     public void ChangeVelocity(bool isZombieEnter)

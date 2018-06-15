@@ -19,6 +19,9 @@ public class PlayerMotor : MonoBehaviour {
 
 	private CharacterController charCtrl;
 
+	//Spectator mode
+	private PlayerInput playerInput;
+
 	[HideInInspector]
 	public Animator animator;
 
@@ -28,6 +31,7 @@ public class PlayerMotor : MonoBehaviour {
 	{
 		charCtrl = GetComponent<CharacterController>();
 		animator = GetComponent<Animator> ();
+		playerInput = GetComponent<PlayerInput> ();
 	}
 
 	//Se ejecuta cada iteracion de fisicas
@@ -52,13 +56,13 @@ public class PlayerMotor : MonoBehaviour {
 				//Debug.Log("Entro");
 			}
 		}
-		else //Si no estoy en el suelo
+		else if(!playerInput.spectatorMode)//Si no estoy en el suelo
 		{
 			velocidadVertical -= gravedad * Time.deltaTime;
 			animator.SetBool("IsGrounded", false);
 
 		}
-
+	
 		Vector3 vectorCaida = new Vector3 (0, velocidadVertical, 0);
 		charCtrl.Move (vectorCaida * Time.deltaTime);
 
