@@ -15,9 +15,6 @@ public class CameraCollision : MonoBehaviour {
 		public Vector3 targetPosOffset = new Vector3 (0,3.4f,0);
 		public float lookSmooth = 100f;
 		public float distanceFromTarget = -8;
-		public float zoomSmooth = 100;
-		public float maxZoom = -2;
-		public float minZoom = -15;	
 		public bool smoothFollow = true;
 		public float smooth = 0.05f;
 
@@ -29,11 +26,9 @@ public class CameraCollision : MonoBehaviour {
 	public class OrbitSettings
 	{
 		public float xRotation = -20;
-		public float yRotation = -180;
 		public float maxXRotation = 25;
 		public float minXRotation = -85;
 		public float vOrbitSmooth = 150;
-		public float hOrbitSmooth = 150;
 	}
 
 	[System.Serializable]
@@ -51,7 +46,7 @@ public class CameraCollision : MonoBehaviour {
 
 	Vector3 targetPos = Vector3.zero;
 	Vector3 destination = Vector3.zero;
-	float vOrbitInput, hOrbitInput, zoomInput,hOrbitSnapInput;
+	float vOrbitInput;
 	Vector3 adjustedDestination = Vector3.zero;
 	Vector3 camVel = Vector3.zero;
 
@@ -149,7 +144,7 @@ public class CameraCollision : MonoBehaviour {
 	void Start () {
 		SetCameraTarget (target);
 
-		vOrbitInput = hOrbitInput = zoomInput = hOrbitSnapInput = 0;
+		vOrbitInput = 0;
 
 		MoveToTarget ();
 
@@ -175,6 +170,7 @@ public class CameraCollision : MonoBehaviour {
 	void LateUpdate()
 	{
 		LookAtTarget ();
+		MoveToTarget ();
 	}
 
 	void FixedUpdate(){
@@ -198,20 +194,16 @@ public class CameraCollision : MonoBehaviour {
 
 	void GetInput(){
 		vOrbitInput = -Input.GetAxis("Mouse Y");
-		hOrbitInput = 0;
-		hOrbitSnapInput = 0;
-		zoomInput = 0;
 	}
 
 	void MoveToTarget (){
 
 		targetPos = target.position + position.targetPosOffset;
-		destination = Quaternion.Euler (orbit.xRotation, orbit.yRotation + target.eulerAngles.y, 0) * -Vector3.forward * position.distanceFromTarget;
+		destination = Quaternion.Euler (orbit.xRotation, 180+target.eulerAngles.y, 0) * -Vector3.forward * position.distanceFromTarget;
 		destination += targetPos;
-		//transform.position = destination;
 
 		if (collision.colliding) {
-			adjustedDestination = Quaternion.Euler (orbit.xRotation, orbit.yRotation + target.eulerAngles.y, 0) * Vector3.forward * position.adjustmentDistance;
+			adjustedDestination = Quaternion.Euler (orbit.xRotation, 180+target.eulerAngles.y, 0) * Vector3.forward * position.adjustmentDistance;
 			adjustedDestination += targetPos;
 
 			if (position.smoothFollow) {
@@ -233,10 +225,9 @@ public class CameraCollision : MonoBehaviour {
 	}
 
 	void OrbitTarget(){
-		orbit.yRotation = -180;
+		
 
 		orbit.xRotation += -vOrbitInput * orbit.vOrbitSmooth * Time.deltaTime;
-		//orbit.yRotation += -hOrbitInput * orbit.vOrbitSmooth * Time.deltaTime;
 
 		if (orbit.xRotation > orbit.maxXRotation) 
 			orbit.xRotation = orbit.maxXRotation;
