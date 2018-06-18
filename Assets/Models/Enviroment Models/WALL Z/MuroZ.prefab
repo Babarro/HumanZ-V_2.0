@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4312490617821368}
   - component: {fileID: 33632543904132596}
   - component: {fileID: 23315828028997198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Base_MuroZ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4529116831942524}
   - component: {fileID: 33075366514632406}
   - component: {fileID: 23842176736186826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cilindro_Muro_Z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4139365757032268}
   - component: {fileID: 65524206817582936}
   - component: {fileID: 65776225635452706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MuroZ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,9 +68,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940524331845208}
-  m_LocalRotation: {x: -0, y: 0.7101892, z: -0, w: -0.7040109}
-  m_LocalPosition: {x: -22.09, y: 0.85000324, z: -40.41}
-  m_LocalScale: {x: 84.77783, y: 84.77778, z: 84.777725}
+  m_LocalRotation: {x: -0, y: 0.9999934, z: -0, w: -0.0036341997}
+  m_LocalPosition: {x: 85.88, y: 0.85, z: -44.619}
+  m_LocalScale: {x: 84.77776, y: 84.77776, z: 84.77772}
   m_Children:
   - {fileID: 4312490617821368}
   - {fileID: 4529116831942524}

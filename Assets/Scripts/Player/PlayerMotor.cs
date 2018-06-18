@@ -56,7 +56,7 @@ public class PlayerMotor : MonoBehaviour {
 				//Debug.Log("Entro");
 			}
 		}
-		else if(!playerInput.spectatorMode)//Si no estoy en el suelo
+		else //Si no estoy en el suelo
 		{
 			velocidadVertical -= gravedad * Time.deltaTime;
 			animator.SetBool("IsGrounded", false);
@@ -64,6 +64,8 @@ public class PlayerMotor : MonoBehaviour {
 		}
 	
 		Vector3 vectorCaida = new Vector3 (0, velocidadVertical, 0);
+		if(playerInput.spectatorMode)
+			vectorCaida = new Vector3 (0, 0, 0);
 		charCtrl.Move (vectorCaida * Time.deltaTime);
 
 	}

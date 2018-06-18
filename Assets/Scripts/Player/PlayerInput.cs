@@ -28,6 +28,7 @@ public class PlayerInput : NetworkBehaviour
 	private GameObject canvas;
 	public bool spectatorMode = false;
 	public int updownSpeed = 4;
+	public CameraCollision camCollision;
 
    // private ZombieHumanController zombieHumanController;
 
@@ -114,6 +115,8 @@ public class PlayerInput : NetworkBehaviour
 			graphicsZombie.SetActive (false);
 			grapichsName.SetActive (false);
 			canvas.SetActive (false);
+			camCollision.orbit.maxXRotation = 359;
+			camCollision.orbit.minXRotation = -359;
 		}
 		//Aplicar fuerza impacto 
 		if(Input.GetKeyDown(KeyCode.F)){
