@@ -21,6 +21,9 @@ public class ZombieHumanController : NetworkBehaviour {
 	private UIController uiController;
 
 	[SerializeField]
+	PickUpZombie puZombie;
+
+	[SerializeField]
 	float stunTime;
 
     private void Awake()
@@ -109,7 +112,7 @@ public class ZombieHumanController : NetworkBehaviour {
     }
 
 	[ClientRpc]
-	public void RpcSetHuman()
+	public void RpcSetFirstHuman()
 	{
 		if(isLocalPlayer)
 			uiController.DesactivarComponenteUI (uiController.barraInfeccion);
@@ -121,6 +124,7 @@ public class ZombieHumanController : NetworkBehaviour {
 		humanGO.SetActive(true);
 		zombieGO.SetActive(false);
 		isZombie = false;
+		puZombie.probOfConvertToZombie = 1;
 		playerInventory.DestroyAllItems ();
 		playerInput.ChangeVelocity(isZombie);
 	}

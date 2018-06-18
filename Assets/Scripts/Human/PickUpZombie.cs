@@ -8,8 +8,13 @@ public class PickUpZombie : MonoBehaviour {
 	ZombieHumanController zhController;
 
 	public float probOfConvertToZombie = 0.5f;
+	float startProbOfConvertToZombie;
 
 	public bool canPick = false;
+
+	void Awake(){
+		startProbOfConvertToZombie = probOfConvertToZombie;
+	}
 
     // Use this for initialization
     void Start () {
@@ -34,6 +39,7 @@ public class PickUpZombie : MonoBehaviour {
 						float convert = Random.Range (0.0f, 1.0f);
 						if (convert <= probOfConvertToZombie) {
 							zhController.CmdChangeForm (transform.parent.name, true);
+							probOfConvertToZombie = startProbOfConvertToZombie;
 						}
 						zhController.CmdChangeForm (other.gameObject.name, false);
 					}

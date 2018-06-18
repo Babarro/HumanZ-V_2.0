@@ -57,7 +57,7 @@ public class GMSetup : NetworkBehaviour {
 			do{
 				lucky = Random.Range (0, playersList.Length);
 			}while(playersList[lucky] == null);
-			playersList [lucky].GetComponent<ZombieHumanController> ().RpcSetHuman();
+			playersList [lucky].GetComponent<ZombieHumanController> ().RpcSetFirstHuman();
 			humanzPlayers.Add (playersList[lucky]);
 			playersList [lucky] = null;
 		}
