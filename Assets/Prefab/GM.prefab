@@ -86,6 +86,12 @@ MonoBehaviour:
   gmRecursos: {fileID: 114124315494196484}
   canvasPrefab: {fileID: 1213365503943688, guid: 9086536db5ab86c4893bcfdf68902f9a,
     type: 2}
+  humanTpPoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  minimapResources: {fileID: 0}
   iaZombieHumanPref: {fileID: 1920411382438378, guid: d4e8df8564f79ef48aeeb6c820f43852,
     type: 2}
   lootPhaseTime: 10

@@ -20,9 +20,15 @@ public class GMSetup : NetworkBehaviour {
 	GameObject canvasPrefab;
 
 	[SerializeField]
+	Transform[] humanTpPoint;
+	[SerializeField]
+	GameObject minimapResources;
+
+	[SerializeField]
 	GameObject iaZombieHumanPref;
 
 	public float lootPhaseTime = 10f;
+	public float minimapPhaseTime = 5f;
 
 	bool hasEnter = false;
 
@@ -73,6 +79,7 @@ public class GMSetup : NetworkBehaviour {
 			}
 		}
 		foreach (GameObject human in humanzPlayers) {
+			human.AddComponent<HumanInitialSpawn> ();
 			human.GetComponent<PlayerSetup> ().RpcSetPosition(new Vector3(122,-79,-141));
 		}
 
@@ -85,6 +92,7 @@ public class GMSetup : NetworkBehaviour {
 		GetComponent<GMEndGameController> ().SetUp (LobbyManager.s_Singleton._playerNumber,numberOfHumanzs);
 		uiController.RpcStartMessage ();
 		SetUpBeforePhaseTime (playersList,humanzPlayers);
+		StartCoroutine (MinimapTime(playersList,humanzPlayers));
 		StartCoroutine (PhaseTime(playersList,humanzPlayers));
 	}
 		
@@ -93,11 +101,30 @@ public class GMSetup : NetworkBehaviour {
 		uiController.time = Time.time;
 	}
 
+	IEnumerator MinimapTime(GameObject[] zombies,List<GameObject> humanz){
+		yield return new WaitForSeconds (minimapPhaseTime);
+		foreach (GameObject zombie in zombies) {
+			if (zombie != null) {
+				zombie.GetComponent<PlayerSetup> ().RpcDeactivateArrow();
+			}
+		}
+
+		foreach (GameObject human in humanz) {
+			human.GetComponent<PlayerSetup> ().RpcDeactivateArrow ();
+		}
+	}
+
 	IEnumerator PhaseTime(GameObject[] playersList,List<GameObject> humanzPlayers){
 		yield return new WaitForSeconds (lootPhaseTime);
 		GetComponent<GMCurasController> ().SetUp ();
 		SetUpAfterPhaseTime (playersList,humanzPlayers);
+		RpcDestroyMinimapResources ();
 		Destroy (this);
+	}
+
+	[ClientRpc]
+	void RpcDestroyMinimapResources(){
+		Destroy (minimapResources);
 	}
 
 	void SetUpFirst(GameObject[] players){
@@ -126,7 +153,9 @@ public class GMSetup : NetworkBehaviour {
 		}
 
 		foreach (GameObject human in humanz) {
-			human.GetComponent<PlayerSetup> ().RpcDeactivateLoadingScreen();
+			PlayerSetup pSetUp = human.GetComponent<PlayerSetup> ();
+			pSetUp.RpcActivateMinimap ();
+			pSetUp.RpcDeactivateLoadingScreen();
 		}
 
 
@@ -142,7 +171,9 @@ public class GMSetup : NetworkBehaviour {
 
 		foreach (GameObject human in humanz) {
 			human.GetComponent<PlayerHp> ().RpcSetUpFinal ();
-			human.GetComponent<PlayerSetup> ().RpcSetPositionSpecial(new Vector3(-3,1,-5),"HumanAfterLoot");
+			human.GetComponent<PlayerSetup> ().RpcDeactivateMinimap ();
+			human.GetComponent<PlayerSetup> ().RpcSetPositionSpecial(humanTpPoint[human.GetComponent<HumanInitialSpawn>().spawnChoose].position,humanTpPoint[human.GetComponent<HumanInitialSpawn>().spawnChoose].rotation,"HumanAfterLoot");
+			Destroy(human.GetComponent<HumanInitialSpawn> ());
 		}
 
 	}

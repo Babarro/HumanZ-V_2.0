@@ -29,6 +29,8 @@ public class PlayerSetup : NetworkBehaviour {
 	PlayerTextName playerTextName;
 	[SerializeField]
 	ParticlesManager pManager;
+	[SerializeField]
+	GameObject arrow;
 
     private void Awake()
     {
@@ -129,11 +131,12 @@ public class PlayerSetup : NetworkBehaviour {
 		transform.position = pos;
 	}
 	[ClientRpc]
-	public void RpcSetPositionSpecial(Vector3 pos,string cases){
+	public void RpcSetPositionSpecial(Vector3 pos,Quaternion rot,string cases){
 		if (!isLocalPlayer)
 			return;
 
 		transform.position = pos;
+		transform.rotation = rot;
 		switch (cases) {
 		case "HumanAfterLoot":
 			pManager.spawnHumanFX.Play ();
@@ -154,6 +157,19 @@ public class PlayerSetup : NetworkBehaviour {
 	[ClientRpc]
 	public void RpcDeactivateLoadingScreen(){
 		LobbyManager.s_Singleton.SetLoadingScreen (false);
+	}
+
+	[ClientRpc]
+	public void RpcActivateMinimap(){
+		GameObject.FindGameObjectWithTag ("Minimap").transform.GetChild(0).gameObject.SetActive(true);
+	}
+	[ClientRpc]
+	public void RpcDeactivateMinimap(){
+		GameObject.FindGameObjectWithTag ("Minimap").transform.GetChild(0).gameObject.SetActive(false);
+	}
+	[ClientRpc]
+	public void RpcDeactivateArrow(){
+		arrow.SetActive (false);
 	}
 
 }
