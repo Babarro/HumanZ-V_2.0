@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 2450c0ad051c9b84d803df94c1108606
+timeCreated: 1529349537
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BaseLamp_Factory001
+    100002: //RootNode
+    100004: Factory_WireLamp003
+    100006: Factory_WireLamp004
+    100008: Neon1_Factory002
+    100010: Neon1_Factory003
+    100012: Wirecontroller005
+    100014: Wirecontroller006
+    100016: Wirecontroller007
+    100018: Wirecontroller008
+    400000: BaseLamp_Factory001
+    400002: //RootNode
+    400004: Factory_WireLamp003
+    400006: Factory_WireLamp004
+    400008: Neon1_Factory002
+    400010: Neon1_Factory003
+    400012: Wirecontroller005
+    400014: Wirecontroller006
+    400016: Wirecontroller007
+    400018: Wirecontroller008
+    2300000: BaseLamp_Factory001
+    2300002: Factory_WireLamp003
+    2300004: Factory_WireLamp004
+    2300006: Neon1_Factory002
+    2300008: Neon1_Factory003
+    3300000: BaseLamp_Factory001
+    3300002: Factory_WireLamp003
+    3300004: Factory_WireLamp004
+    3300006: Neon1_Factory002
+    3300008: Neon1_Factory003
+    4300000: BaseLamp_Factory001
+    4300002: Factory_WireLamp003
+    4300004: Factory_WireLamp004
+    4300006: Neon1_Factory002
+    4300008: Neon1_Factory003
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: 288054090f60ebf46b199adc56926615, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NeonZ
+    second: {fileID: 2100000, guid: f176607c21a578f4d9e8b9d1b6bb8098, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wires
+    second: {fileID: 2100000, guid: 4e285b905a5acc346af5045dba320abe, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
