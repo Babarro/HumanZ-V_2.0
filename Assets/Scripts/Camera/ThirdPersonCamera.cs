@@ -23,7 +23,7 @@ public class ThirdPersonCamera : MonoBehaviour {
 
 		MoveTargetToLook (yMove);
 	}
-	
+
 	// Update is called once per frame
 	void LateUpdate () {
 		
