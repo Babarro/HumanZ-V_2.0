@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Albedo
-  m_Shader: {fileID: 4800000, guid: 4b510f0ba877e664f959e0858af74480, type: 3}
-  m_ShaderKeywords: _SPECGLOSSMAP
+  m_Shader: {fileID: 4800000, guid: 80412fe88398cd147be3aacebe2c3fe3, type: 3}
+  m_ShaderKeywords: OUTLINES TCP2_DISABLE_WRAPPED_LIGHT _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -54,6 +54,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 2800000, guid: 357a70330d529854eb85a7e59bb94387, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -70,16 +74,40 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Offset1: 0
+    - _Offset2: 0
+    - _Outline: 1
     - _OutlineThickness: 0.336
     - _Parallax: 0.02
+    - _RampSmooth: 0.2
+    - _RampSmoothAdd: 0.75
+    - _RampThreshold: 0.5
+    - _RimMax: 0.85
+    - _RimMin: 0.6
+    - _RimStrength: 0.5
     - _Shininess: 1
     - _SmoothnessTextureChannel: 0
+    - _SpecBlend: 1
+    - _SpecSmooth: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TCP2_DISABLE_WRAPPED_LIGHT: 1
+    - _TCP2_OUTLINE_CONST_SIZE: 0
+    - _TCP2_OUTLINE_TEXTURED: 0
+    - _TCP2_RAMPTEXT: 0
+    - _TCP2_SPEC_TOON: 0
+    - _TCP2_STYLIZED_FRESNEL: 0
+    - _TCP2_ZSMOOTH_ON: 0
+    - _TexLod: 5
     - _UVSec: 0
+    - _ZSmooth: -0.5
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
+    - _SColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
     - _SpecColor: {r: 0.057525948, g: 0.058823526, b: 0.05774967, a: 1}
     - _UnlitColor: {r: 1, g: 1, b: 1, a: 1}
