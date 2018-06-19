@@ -136,6 +136,7 @@ public class GMSetup : NetworkBehaviour {
 			if (player != null) {
 				player.GetComponent<PlayerHp> ().RpcSetUpFirst();
 				player.GetComponent<PlayerInventory> ().RpcSetup();
+				player.GetComponent<PlayerSetup> ().RpcSetUp ();
 				player.GetComponent<PlayerSetup> ().RpcSetUpName (player.GetComponent<PlayerSetup>().playerName);
 				player.GetComponent<ZombieHumanController> ().RpcSetup ();
 			}
@@ -155,6 +156,7 @@ public class GMSetup : NetworkBehaviour {
 		foreach (GameObject human in humanz) {
 			PlayerSetup pSetUp = human.GetComponent<PlayerSetup> ();
 			pSetUp.RpcActivateMinimap ();
+			pSetUp.RpcActivateChooseSpawnUI ();
 			pSetUp.RpcDeactivateLoadingScreen();
 		}
 
@@ -171,8 +173,10 @@ public class GMSetup : NetworkBehaviour {
 
 		foreach (GameObject human in humanz) {
 			human.GetComponent<PlayerHp> ().RpcSetUpFinal ();
-			human.GetComponent<PlayerSetup> ().RpcDeactivateMinimap ();
-			human.GetComponent<PlayerSetup> ().RpcSetPositionSpecial(humanTpPoint[human.GetComponent<HumanInitialSpawn>().spawnChoose].position,humanTpPoint[human.GetComponent<HumanInitialSpawn>().spawnChoose].rotation,"HumanAfterLoot");
+			PlayerSetup psetup = human.GetComponent<PlayerSetup> ();
+			psetup.RpcDeactivateMinimap ();
+			psetup.RpcDeactivateChooseSpawnUI();
+			psetup.RpcSetPositionSpecial(humanTpPoint[human.GetComponent<HumanInitialSpawn>().spawnChoose].position,humanTpPoint[human.GetComponent<HumanInitialSpawn>().spawnChoose].rotation,"HumanAfterLoot");
 			Destroy(human.GetComponent<HumanInitialSpawn> ());
 		}
 

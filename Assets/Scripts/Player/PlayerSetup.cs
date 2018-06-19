@@ -23,6 +23,8 @@ public class PlayerSetup : NetworkBehaviour {
 
 	public string playerName;
 
+	UIController uiController;
+
 	[SerializeField]
 	TextMesh playerNameText;
 	[SerializeField]
@@ -130,6 +132,18 @@ public class PlayerSetup : NetworkBehaviour {
 
 		transform.position = pos;
 	}
+
+	[ClientRpc]
+	public void RpcSetUp(){
+		if (!isLocalPlayer)
+			return;
+		
+		uiController = GameObject.FindGameObjectWithTag ("Canvas").GetComponent<UIController> ();
+
+		if (uiController == null)
+			Debug.LogError ("UiController not founded!");
+	}
+
 	[ClientRpc]
 	public void RpcSetPositionSpecial(Vector3 pos,Quaternion rot,string cases){
 		if (!isLocalPlayer)
@@ -161,15 +175,34 @@ public class PlayerSetup : NetworkBehaviour {
 
 	[ClientRpc]
 	public void RpcActivateMinimap(){
+		if (!isLocalPlayer)
+			return;
 		GameObject.FindGameObjectWithTag ("Minimap").transform.GetChild(0).gameObject.SetActive(true);
 	}
 	[ClientRpc]
 	public void RpcDeactivateMinimap(){
+		if (!isLocalPlayer)
+			return;
 		GameObject.FindGameObjectWithTag ("Minimap").transform.GetChild(0).gameObject.SetActive(false);
 	}
 	[ClientRpc]
 	public void RpcDeactivateArrow(){
 		arrow.SetActive (false);
+	}
+
+	[ClientRpc]
+	public void RpcActivateChooseSpawnUI(){
+		if (!isLocalPlayer)
+			return;
+		uiController.ActivateChooseSpawn ();
+	}
+
+	[ClientRpc]
+	public void RpcDeactivateChooseSpawnUI(){
+		if (!isLocalPlayer)
+			return;
+
+		uiController.DeactivateChooseSpawn ();
 	}
 
 }

@@ -16,6 +16,10 @@ public class UIController : NetworkBehaviour {
 	GameObject ZombieText;
 	[SerializeField]
 	Text numberOfZombiesLeftUI;
+	[SerializeField]
+	GameObject chooseSpawnHumanGO;
+	[SerializeField]
+	Text spawnPosText;
 
 	public GameObject TrampaPanel;
 	public GameObject PowerUpPanel;
@@ -152,5 +156,18 @@ public class UIController : NetworkBehaviour {
 			ActivarComponenteUI(HumanText);
 			DesactivarComponenteUI(HumanText,5f);
 		}
+	}
+
+	public void ActivateChooseSpawn(){
+		chooseSpawnHumanGO.SetActive (true);
+	}
+
+	public void DeactivateChooseSpawn(){
+		chooseSpawnHumanGO.SetActive (false);
+	}
+
+	public void SetSpawnPointHumanUI(int i)
+	{
+		spawnPosText.text = i.ToString ();
 	}
 }
