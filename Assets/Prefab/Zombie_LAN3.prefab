@@ -10665,7 +10665,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772445169778016}
-  m_LocalRotation: {x: 0.0030425976, y: 0.717879, z: -0.6961608, w: -0.00088644034}
+  m_LocalRotation: {x: 0.0030425964, y: 0.71787894, z: -0.69616073, w: -0.00088644004}
   m_LocalPosition: {x: -1.4901161e-10, y: -5.2619725e-10, z: 0}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children:
@@ -10692,7 +10692,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1651164785554032}
-  m_LocalRotation: {x: 0.6131893, y: 0.61320364, z: -0.35211655, w: 0.35212797}
+  m_LocalRotation: {x: 0.61318934, y: 0.6132037, z: -0.35211658, w: 0.352128}
   m_LocalPosition: {x: -0.00037995423, y: 0.00049428036, z: 0.00076176465}
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_Children:
@@ -19268,8 +19268,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20313328388868710}
+  offsetSperecastCenter: {x: 0, y: 0.3, z: -0.3}
+  maxDistanceSpherecast: 0.32
+  gravedad: 14
+  fuerzaSalto: 7.5
+  timeAnimJump: 0
   animator: {fileID: 0}
-  cameraRotationLimit: 30
   stuned: 0
 --- !u!114 &114645214106207692
 MonoBehaviour:
@@ -19289,6 +19293,12 @@ MonoBehaviour:
   playerInventory: {fileID: 0}
   playerPickUp: {fileID: 0}
   zhController: {fileID: 0}
+  graphicsHuman: {fileID: 0}
+  graphicsZombie: {fileID: 0}
+  grapichsName: {fileID: 0}
+  spectatorMode: 0
+  updownSpeed: 4
+  camCollision: {fileID: 0}
 --- !u!114 &114818270399400080
 MonoBehaviour:
   m_ObjectHideFlags: 1
