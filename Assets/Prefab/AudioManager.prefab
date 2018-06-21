@@ -54,7 +54,7 @@ MonoBehaviour:
   sounds:
   - name: InGameTheme
     clip: {fileID: 8300000, guid: 5a44383e8d89f584eab7e8ee2e60f346, type: 3}
-    volume: 0.15
+    volume: 0.05
     pitch: 1
     source: {fileID: 0}
   - name: CuraSound
