@@ -28,7 +28,7 @@ public class CuraCollision : NetworkBehaviour {
 			if (other.GetComponent<ZombieHumanController> ().isZombie && other.GetComponent<PlayerSetup>().isLocalPlayer && !taken) {
 				other.GetComponent<PlayerHp> ().SetStartTime ();
 				other.GetComponent<ParticlesManager> ().curaZombie.Play();
-
+				FindObjectOfType <AudioManager>().PlaySound("CuraSound");
 				//meshRenderer.material.color = Color.red;
 				lightAllo.SetActive(false);
 				taken = true;
