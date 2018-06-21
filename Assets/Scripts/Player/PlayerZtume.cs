@@ -60,6 +60,9 @@ public class PlayerZtume : NetworkBehaviour
             weapons.SetActive(false);
             traps.SetActive(false);
 			particlesManager.ztumeToHuman.Play ();
+			FindObjectOfType <AudioManager> ().PlaySound ("ZtumeStart");
+			Invoke("ZtumeEndSound", 3);
+
         }
     }
 
@@ -85,5 +88,8 @@ public class PlayerZtume : NetworkBehaviour
 		RpcDeactivateZtume(this.name);
 		//playerZtume.RpcDeactivateZtume(this.name);
 	}
-		
+
+	void ZtumeEndSound(){
+		FindObjectOfType<AudioManager> ().PlaySound ("ZtumeEnd");
+	}
 }
