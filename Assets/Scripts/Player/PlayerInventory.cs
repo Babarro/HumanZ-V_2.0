@@ -80,8 +80,11 @@ public class PlayerInventory : NetworkBehaviour {
 				playerMotor.stuned = true;
 				//Activar anim
 				animator.SetBool("ColocandoTrampa", true);
-				if(isLocalPlayer)
-					uiInventoryController.StartTimer (((ITrap)trapsScript).GetTimeToPlace());
+				if (isLocalPlayer) {
+					uiInventoryController.StartTimer (((ITrap)trapsScript).GetTimeToPlace ());
+					//Activar Sonido Colocacion Trampa
+					FindObjectOfType<AudioManager>().PlaySound("PutIncendiaryTrap");
+				}
 				canChange = false;
 				Invoke ("PlacingTrap", ((ITrap)trapsScript).GetTimeToPlace());
 			}
@@ -114,8 +117,10 @@ public class PlayerInventory : NetworkBehaviour {
 		} else {
 			if (trapsScript != null) {
 				playerMotor.stuned = false;
-				if(isLocalPlayer)
+				if (isLocalPlayer) {
 					uiInventoryController.StopTimer ();
+					FindObjectOfType<AudioManager>().StopSound("PutIncendiaryTrap");
+				}
 				//Cancelar anim trampa
 				animator.SetBool("ColocandoTrampa", false);
 				CancelInvoke ();
@@ -368,6 +373,10 @@ public class PlayerInventory : NetworkBehaviour {
 			if (trapsGraphics != null)
 				trapsGraphics.SetActive (false);
 			if (weaponsGraphics != null) {
+				//Sonido Sacar PunchGun
+				if(isLocalPlayer)
+					FindObjectOfType<AudioManager> ().PlaySound ("ChangePunchGun");
+
 				weaponsGraphics.SetActive (true);
 				Debug.Log ("Activar Layer Weapon");
 				animator.SetLayerWeight (1, 1f); //Layer Weapon
@@ -379,8 +388,9 @@ public class PlayerInventory : NetworkBehaviour {
 			animator.SetLayerWeight (1, 0f); //Layer Weapon
 			animator.SetLayerWeight (2, 0f); //Layer Traps
 		}
-		if(isLocalPlayer)
+		if (isLocalPlayer)
 			uiInventoryController.SetInUse (isWeapon);
+		
 	}
 
 	[ClientRpc]

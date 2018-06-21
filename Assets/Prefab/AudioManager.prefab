@@ -54,6 +54,31 @@ MonoBehaviour:
   sounds:
   - name: InGameTheme
     clip: {fileID: 8300000, guid: 5a44383e8d89f584eab7e8ee2e60f346, type: 3}
+    volume: 0.15
+    pitch: 1
+    source: {fileID: 0}
+  - name: CuraSound
+    clip: {fileID: 8300000, guid: a456a2470d919db4c979c94e49954652, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ZtumeStart
+    clip: {fileID: 8300000, guid: b251298772f5fcc4a849c0c86f7e998e, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ZtumeEnd
+    clip: {fileID: 8300000, guid: 6a936f01c4d736f4a9ce706f6377b41f, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: PutIncendiaryTrap
+    clip: {fileID: 8300000, guid: 5721c22f0d325fe4ba76253937921229, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ChangePunchGun
+    clip: {fileID: 8300000, guid: a54991596107c024d96c674b1cf2a818, type: 3}
     volume: 0.5
     pitch: 1
     source: {fileID: 0}

@@ -12,6 +12,7 @@ public class PlayerInZendiaryBomb : NetworkBehaviour {
 	RecibirImpacto recibirImpactoScript;
 
 	public GameObject pisarTrampaFX;
+	public GameObject prefabExplosionSound;
 
 	// Use this for initialization
 	void Start () {
@@ -66,5 +67,16 @@ public class PlayerInZendiaryBomb : NetworkBehaviour {
 		GameObject trampaSP =  Instantiate (pisarTrampaFX, pos, pisarTrampaFX.transform.rotation)as GameObject;
 		trampaSP.GetComponent<ParticleSystem> ().Play ();
 		Destroy (trampaSP, 1);
+	}
+
+	[Command]
+	public void CmdExplosionSound(Vector3 pos){
+		RpcExplosionSound (pos);
+	}
+
+	[ClientRpc]
+	public void RpcExplosionSound(Vector3 pos){
+		GameObject explosionSound = Instantiate (prefabExplosionSound, pos, prefabExplosionSound.transform.rotation) as GameObject;
+		Destroy (explosionSound, 1.5f);
 	}
 }

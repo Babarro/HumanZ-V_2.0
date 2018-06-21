@@ -87,6 +87,7 @@ public class InZendiaryBomb : NetworkBehaviour, IActivation, ITrap {
 		if (collision.gameObject.tag == "Player") {
 			PlayerInZendiaryBomb pInzendiary = collision.gameObject.GetComponent<PlayerInZendiaryBomb> ();
 			pInzendiary.CmdTrampaPisada (this.transform.position);
+			pInzendiary.CmdExplosionSound (this.transform.position);
 			pInzendiary.CmdDestroyInZendiaryBomb (this.transform.name);
 			pInzendiary.InZendiaryBombEffect (power, stunTime);
 			if(collision.gameObject.GetComponent<ZombieHumanController>().isZombie)
@@ -97,6 +98,7 @@ public class InZendiaryBomb : NetworkBehaviour, IActivation, ITrap {
 	public float GetTimeToPlace(){
 		return timeToPlaceTrap;
 	}
+
 
 
 
