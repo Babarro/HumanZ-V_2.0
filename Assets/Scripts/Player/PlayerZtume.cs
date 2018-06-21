@@ -60,8 +60,10 @@ public class PlayerZtume : NetworkBehaviour
             weapons.SetActive(false);
             traps.SetActive(false);
 			particlesManager.ztumeToHuman.Play ();
-			FindObjectOfType <AudioManager> ().PlaySound ("ZtumeStart");
-			Invoke("ZtumeEndSound", 3);
+			if (isLocalPlayer) {
+				FindObjectOfType <AudioManager> ().PlaySound ("ZtumeStart");
+				Invoke ("ZtumeEndSound", 2.9);
+			}
 
         }
     }
