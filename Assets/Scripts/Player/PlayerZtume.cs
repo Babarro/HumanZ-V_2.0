@@ -62,7 +62,7 @@ public class PlayerZtume : NetworkBehaviour
 			particlesManager.ztumeToHuman.Play ();
 			if (isLocalPlayer) {
 				FindObjectOfType <AudioManager> ().PlaySound ("ZtumeStart");
-				Invoke ("ZtumeEndSound", 2.9);
+				Invoke ("ZtumeEndSound", 2.9f);
 			}
 
         }
