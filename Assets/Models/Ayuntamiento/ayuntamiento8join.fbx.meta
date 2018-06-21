@@ -1,29 +1,29 @@
 fileFormatVersion: 2
-guid: 672b64cb798185e439a1b7e8213243f3
-timeCreated: 1529514989
+guid: 98d5b74e2bed94b4b8843f599d9d6195
+timeCreated: 1529606774
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     100002: BombillaTecho.037
-    100004: Pared_tipo1g.093
-    100006: Pared_tipo1g.093_MeshPart0
-    100008: Pared_tipo1g.093_MeshPart1
+    100004: Escalera3.002
+    100006: Escalera3.002_MeshPart0
+    100008: Escalera3.002_MeshPart1
     400000: //RootNode
     400002: BombillaTecho.037
-    400004: Pared_tipo1g.093
-    400006: Pared_tipo1g.093_MeshPart0
-    400008: Pared_tipo1g.093_MeshPart1
+    400004: Escalera3.002
+    400006: Escalera3.002_MeshPart0
+    400008: Escalera3.002_MeshPart1
     2300000: BombillaTecho.037
-    2300002: Pared_tipo1g.093_MeshPart0
-    2300004: Pared_tipo1g.093_MeshPart1
+    2300002: Escalera3.002_MeshPart0
+    2300004: Escalera3.002_MeshPart1
     3300000: BombillaTecho.037
-    3300002: Pared_tipo1g.093_MeshPart0
-    3300004: Pared_tipo1g.093_MeshPart1
-    4300000: Pared_tipo1g.093_MeshPart0
-    4300002: Pared_tipo1g.093_MeshPart1
-    4300004: BombillaTecho.037
+    3300002: Escalera3.002_MeshPart0
+    3300004: Escalera3.002_MeshPart1
+    4300000: BombillaTecho.037
+    4300002: Escalera3.002_MeshPart0
+    4300004: Escalera3.002_MeshPart1
   externalObjects:
   - first:
       type: UnityEngine:Material
