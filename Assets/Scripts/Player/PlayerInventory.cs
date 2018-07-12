@@ -463,9 +463,11 @@ public class PlayerInventory : NetworkBehaviour {
 		if (zhController.isZombie) {
 			canChange = true;
 			if (isWeapon) {
-				weaponsGraphics.SetActive (true);
+				if(weaponsGraphics!=null)
+					weaponsGraphics.SetActive (true);
 			} else {
-				trapsGraphics.SetActive (true);		
+				if(trapsGraphics!=null)
+					trapsGraphics.SetActive (true);		
 			}
 		}
 	}
