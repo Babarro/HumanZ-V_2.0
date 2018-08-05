@@ -25,7 +25,9 @@ public class PistolaPunyoCollision : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
 			if (collision.gameObject.name != player.name && player.GetComponent<PlayerSetup>().isClient) {
-				
+				// Sonido Impacto Punch Gun
+				FindObjectOfType<AudioManager>().PlaySound("HitPunchGun");
+
 				Vector3 direction = player.transform.TransformDirection(new Vector3(0, 0, 1));
                 direction = direction.normalized;
 				player.CmdPunyoPush(collision.transform.name, direction, power);

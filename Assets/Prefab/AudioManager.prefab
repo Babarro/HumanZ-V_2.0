@@ -82,3 +82,23 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
+  - name: ChangeIncendiaryTrap
+    clip: {fileID: 8300000, guid: a54991596107c024d96c674b1cf2a818, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ShootPunchGun
+    clip: {fileID: 8300000, guid: a54991596107c024d96c674b1cf2a818, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ReloadPunchGun
+    clip: {fileID: 8300000, guid: a54991596107c024d96c674b1cf2a818, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: HitPunchGun
+    clip: {fileID: 8300000, guid: d1233f5b0fb1acf4e8d9163ea8fa309f, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}

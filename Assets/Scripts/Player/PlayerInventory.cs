@@ -401,6 +401,10 @@ public class PlayerInventory : NetworkBehaviour {
 			if (weaponsGraphics != null)
 				weaponsGraphics.SetActive (false);
 			if (trapsGraphics != null) {
+				//Sonido Sacar IncendiaryTrap
+				if(isLocalPlayer)
+					FindObjectOfType<AudioManager> ().PlaySound ("ChangeIncendiaryTrap");
+				
 				trapsGraphics.SetActive (true);
 				Debug.Log ("Activar Layer Traps");
 				animator.SetLayerWeight (1, 0f); //Layer Weapon

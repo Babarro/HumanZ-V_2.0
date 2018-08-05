@@ -38,11 +38,17 @@ public class PlayerDisparoPunyo : NetworkBehaviour {
 			//pistolaPunyoCollisionScript.Push (enterPower);
 		pistolaPunyoCollider.enabled = true;
 		plAnimator.SetTrigger("Shoot");
+		// Sonido Disparo Punch Gun
+		if(isLocalPlayer)
+			FindObjectOfType<AudioManager>().PlaySound("ShootPunchGun");
 	}
 
 	[ClientRpc]
 	public void RpcPullPunyo(){
 		pistolaPunyoCollider.enabled = false;
+		// Sonido Recarga Punch Gun
+		if(isLocalPlayer)
+			FindObjectOfType<AudioManager>().PlaySound("ReloadPunchGun");
 	}
 
     [Command]
