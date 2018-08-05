@@ -1043,7 +1043,7 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0.0000038146973, z: 0.0000009536743}
+    m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 5.4871607, y: 4.7353134, z: 5.4871607}
   m_DirtyAABB: 0
 --- !u!137 &137030846737124906
@@ -1549,8 +1549,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.0000038146973, y: 0, z: -0.0000076293945}
-    m_Extent: {x: 9.346251, y: 6.997015, z: 9.346249}
+    m_Center: {x: 0.0000076293945, y: 0.0000076293945, z: 0}
+    m_Extent: {x: 9.346241, y: 6.9970098, z: 9.34624}
   m_DirtyAABB: 0
 --- !u!137 &137356963389181264
 SkinnedMeshRenderer:
@@ -1595,8 +1595,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.0000019073486, y: 0.0000038146973, z: 0.0000076293945}
-    m_Extent: {x: 6.040135, y: 6.527834, z: 6.040136}
+    m_Center: {x: 0.0000019073486, y: 0.0000038146973, z: 0.000015258789}
+    m_Extent: {x: 6.040134, y: 6.52783, z: 6.040129}
   m_DirtyAABB: 0
 --- !u!137 &137375778168126164
 SkinnedMeshRenderer:
@@ -1687,8 +1687,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: -0.0000038146973, z: -0.0000076293945}
-    m_Extent: {x: 8.643106, y: 5.2607117, z: 8.6431055}
+    m_Center: {x: -0.000015258789, y: 0, z: -0.000015258789}
+    m_Extent: {x: 8.643096, y: 5.26071, z: 8.643102}
   m_DirtyAABB: 0
 --- !u!137 &137445878254398316
 SkinnedMeshRenderer:
@@ -1825,8 +1825,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0.0000009536743, z: 0}
-    m_Extent: {x: 5.728409, y: 3.7273064, z: 5.7284055}
+    m_Center: {x: 0.0000019073486, y: 0.0000019073486, z: 0.0000076293945}
+    m_Extent: {x: 5.7284083, y: 3.7273052, z: 5.7284055}
   m_DirtyAABB: 0
 --- !u!137 &137490457061962502
 SkinnedMeshRenderer:
@@ -1871,8 +1871,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 5.050457, y: 1.2558429, z: 5.050459}
+    m_Center: {x: 0.000015258789, y: 0, z: 0.0000038146973}
+    m_Extent: {x: 5.050457, y: 1.2558427, z: 5.050456}
   m_DirtyAABB: 0
 --- !u!137 &137546471290144188
 SkinnedMeshRenderer:
@@ -2009,8 +2009,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.0000038146973, y: 0.0000076293945, z: 0}
-    m_Extent: {x: 9.419129, y: 5.6745954, z: 9.41913}
+    m_Center: {x: 0, y: 0, z: 0.0000038146973}
+    m_Extent: {x: 9.419129, y: 5.67459, z: 9.419128}
   m_DirtyAABB: 0
 --- !u!137 &137621215246641800
 SkinnedMeshRenderer:
@@ -2147,8 +2147,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0.0000076293945, z: 0}
-    m_Extent: {x: 9.396681, y: 2.8935287, z: 9.396683}
+    m_Center: {x: 0.0000076293945, y: 0.0000076293945, z: 0.0000076293945}
+    m_Extent: {x: 9.39668, y: 2.8935285, z: 9.396681}
   m_DirtyAABB: 0
 --- !u!137 &137777712488286612
 SkinnedMeshRenderer:
@@ -2286,7 +2286,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0, y: -0.0000076293945, z: -0.000030517578}
-    m_Extent: {x: 2.8180718, y: 1.3122494, z: 2.8180804}
+    m_Extent: {x: 6.0683293, y: 2.825752, z: 6.068343}
   m_DirtyAABB: 0
 --- !u!137 &137809692085037278
 SkinnedMeshRenderer:

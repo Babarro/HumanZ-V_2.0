@@ -33,9 +33,9 @@ Material:
     m_Floats:
     - _Cutoff: 0.5
     - _Gloss: 0.5
-    - _NormalIntensity: 1
+    - _NormalIntensity: 0
     - _SpecIntensity: 0.2
-    - _Transparency: 0.5
+    - _Transparency: 0
     m_Colors:
     - _Diffusecolor: {r: 1, g: 1, b: 1, a: 1}
     - _Speccolor: {r: 1, g: 1, b: 1, a: 1}
