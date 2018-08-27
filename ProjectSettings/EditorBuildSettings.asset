@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Cinema_HumanZ_Scene.unity
     guid: f84f23a6fef07ed4381e7fb4fde32508
   - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-    guid: 4cda5f67484fcb549b1e7f52ca3e48e0
+    path: Assets/Scenes/LobbyHumanZ.unity
+    guid: e9f077589ee4aed42922a5c7772cc8fa
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 0a475c2031a309f4d8c7be0eda7fd25f

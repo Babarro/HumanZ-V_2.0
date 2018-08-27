@@ -17,6 +17,6 @@ public class MenuManager : MonoBehaviour {
 
 	public void _InvasionModeScene(){
 		Debug.Log("He pulsado el boton Invasion");
-		SceneManager.LoadScene("Lobby");
+		SceneManager.LoadScene("LobbyHumanZ");
 	}
 }
