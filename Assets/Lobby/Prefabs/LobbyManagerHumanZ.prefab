@@ -823,7 +823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1670294697216740
 GameObject:
   m_ObjectHideFlags: 1
@@ -1166,7 +1166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1971875398009934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,7 +3931,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lobbyManager: {fileID: 114941398071966824}
   serverListRect: {fileID: 224512455320379828}
-  serverEntryPrefab: {fileID: 104980, guid: 9a1af8c2b03c38c43a3e9c2b43db4483, type: 2}
+  serverEntryPrefab: {fileID: 1402945440542878, guid: 20cadcf905917f747b2abff9c2a43740,
+    type: 2}
   noServerFound: {fileID: 1815306361003476}
 --- !u!114 &114933172731265496
 MonoBehaviour:
