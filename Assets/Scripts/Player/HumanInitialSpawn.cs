@@ -9,21 +9,18 @@ public class HumanInitialSpawn : NetworkBehaviour {
 
 	UIController uiController;
 
+	bool isSetUp = false;
+
 	// Use this for initialization
 	void Start () {
-		if (!isLocalPlayer)
-			return;
-
-		uiController = GameObject.FindGameObjectWithTag ("Canvas").GetComponent<UIController> ();
-
-		if (uiController == null)
-			Debug.LogError ("UiController not founded!");
-
-		uiController.SetSpawnPointHumanUI (1);
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (!isSetUp || !isLocalPlayer)
+			return;
+		
 		if (Input.GetKeyDown (KeyCode.Alpha1)) {
 			CmdSetSpawnChoose (0);
 			uiController.SetSpawnPointHumanUI (1);
@@ -45,6 +42,18 @@ public class HumanInitialSpawn : NetworkBehaviour {
 	[Command]
 	public void CmdSetSpawnChoose(int choose){
 		spawnChoose = choose;
+	}
+
+	[ClientRpc]
+	public void RpcSetUp(){
+
+		uiController = GameObject.FindGameObjectWithTag ("Canvas").GetComponent<UIController> ();
+
+		if (uiController == null)
+			Debug.LogError ("UiController not founded!");
+
+		uiController.SetSpawnPointHumanUI (1);
+		isSetUp = true;
 	}
 
 }

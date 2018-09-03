@@ -74,12 +74,13 @@ public class GMSetup : NetworkBehaviour {
 			if (playersList [i] != null) {
 
 				playersList [i].GetComponent<PlayerSetup> ().RpcSetPosition (spawnPositionParent.transform.GetChild(spawnPosIndex).position);
+				playersList [i].GetComponent<HumanInitialSpawn> ().enabled = false;
 				spawnPosIndex++;
 
 			}
 		}
 		foreach (GameObject human in humanzPlayers) {
-			human.AddComponent<HumanInitialSpawn> ();
+			human.GetComponent<HumanInitialSpawn> ().RpcSetUp ();
 			human.GetComponent<PlayerSetup> ().RpcSetPosition(new Vector3(122,-79,-141));
 		}
 
