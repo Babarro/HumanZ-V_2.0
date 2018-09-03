@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4579885627596476}
   - component: {fileID: 114381792604822722}
   - component: {fileID: 114870949380032124}
+  - component: {fileID: 114734936050634530}
   m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
@@ -767,6 +768,7 @@ GameObject:
   - component: {fileID: 114117782434064884}
   - component: {fileID: 114941398071966824}
   - component: {fileID: 114801044765524776}
+  - component: {fileID: 114362600419872180}
   m_Layer: 5
   m_Name: LobbyManagerHumanZ
   m_TagString: Untagged
@@ -979,7 +981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1826370389379124
 GameObject:
   m_ObjectHideFlags: 1
@@ -1228,7 +1230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 1}
+  m_Color: {r: 0.15686275, g: 0.21176472, b: 0.13333334, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1236,12 +1238,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 04a842e316b6f44bf8da702de26a8ed6, type: 3}
-    m_FontSize: 28
+    m_Font: {fileID: 12800000, guid: 42b7a4a86e0dd904ebad90c39d6d2eda, type: 3}
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 4
+    m_MaxSize: 45
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -1446,7 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.591}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.71}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1730,7 +1732,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 0
-  m_Text: localhost
+  m_Text: None
 --- !u!114 &114150349087525376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2342,6 +2344,17 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 0
   m_Text: FIND A GAME
+--- !u!114 &114362600419872180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1635906815926090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114379998380790472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2537,7 +2550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 0
-  m_Text: Hosting
+  m_Text: Offline
 --- !u!114 &114442312603116292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2564,7 +2577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.678}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.772}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3398,6 +3411,17 @@ MonoBehaviour:
   lobbyPanel: {fileID: 224086004644294470}
   ipInput: {fileID: 114526139808629004}
   matchNameInput: {fileID: 114638170481764072}
+--- !u!114 &114734936050634530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1001035938363490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1327945023, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114740207228185278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4051,7 +4075,7 @@ MonoBehaviour:
   matchName: default
   matchSize: 4
   isNetworkActive: 0
-  matchMaker: {fileID: 0}
+  matchMaker: {fileID: 114362600419872180}
   m_ShowLobbyGUI: 0
   m_MaxPlayers: 10
   m_MaxPlayersPerConnection: 1
@@ -5470,7 +5494,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -740.5, y: 90}
+  m_SizeDelta: {x: -740, y: 90}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224748445593282004
 RectTransform:
