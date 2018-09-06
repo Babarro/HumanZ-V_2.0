@@ -16,6 +16,8 @@ TagManager:
   - PistolaUI
   - FxTemporaire
   - Minimap
+  - CameraServer
+  - CameraLobby
   layers:
   - Default
   - TransparentFX
